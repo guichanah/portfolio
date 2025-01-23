@@ -28,24 +28,25 @@ header {
     box-sizing: border-box;
     background: transparent;
     color: #fff;
-    padding: 16px 0;
+    padding: 1vw 0;
     text-align: center;
     position:fixed;
     width: 100%;
     transition: all .4s;
-    .inner{padding: 0 50px; display: flex; justify-content: space-between;
-        h1{white-space: nowrap;
+    .inner{padding: 0 50px; display: flex; justify-content: space-between; align-items: center;
+        h1{white-space: nowrap; font-size:0;
+            img{width: 8vw; }
             #blacklogo{display: none;}
         }    
     }
     &.scrolled{background: #fff; color: #333;
         h1{
             #whitelogo{display: none;}
-            #blacklogo{display: block;}
+            #blacklogo{display: block; }
         }
         #rightmenu{
             ul li a{color: #000;}
-            ul li:first-child::after{content: "|"; color: #000;}
+            ul li:first-child::after{content: "|"; color: #000; font-size: clamp(10px, 0.9vw, 20px);}
         }
         nav ul li a {color: #000;}
         nav ul li a:hover{color: #808080;}
@@ -53,12 +54,13 @@ header {
 }
 nav{display: flex;
 }
-#rightmenu{
+#rightmenu{ vertical-align: middle;
     ul{display: flex;}
     ul li{margin: 0 10px; white-space: nowrap;
-        a{color: #fff; text-decoration: none; font-weight: bold; line-height: 47px;}
+        a{color: #fff; text-decoration: none; font-weight: bold; line-height: 47px;
+            font-size: clamp(10px, 0.9vw, 20px);}
     }
-    ul li:first-child::after{content: "|"; color: #fff; padding-left: 16px;  font-weight: bold;}
+    ul li:first-child::after{content: "|"; color: #fff; padding-left: 16px;  font-weight: bold; font-size: clamp(10px, 0.9vw, 20px);}
 }
 
 
@@ -78,7 +80,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: clamp(11px, 1.0vw, 20px);
 }
 
 nav ul li a:hover{color: #808080;}
@@ -131,11 +133,11 @@ nav ul li a:hover{color: #808080;}
     .titles h2{margin-bottom: 20px;}
 }
 
-#roomtabs{width: 100%;
+#roomtabs{width: 100%;  white-space: nowrap;
     input{display: none;}
-    input:checked+label p{color: #000; background: #2B2921;;
+    input:checked+label p{color: #000; background: #2B2921;
         span{font-weight: bold; color: #fff;}}
-    input+label{width: 50px; display: inline-block;  margin-bottom: 15px; margin-right: 1.5vw;
+    input+label{width: 50px; display: inline-block;  margin-bottom: 15px; margin-right: 0.5vw;
         p{width: 50px; height: 25px; line-height: 25px; 
             cursor: pointer;
             border-radius: 5px; text-align: center;
@@ -267,6 +269,7 @@ main #tab11:checked ~ #roomlist #location11{display: flex;}
 
 
 footer{
+    hr{margin: 10px 0;}
     .foottitle{font-weight: bold; margin-bottom: 7px; margin-top: -2px;}
     .phone{font-size: clamp(10px, 1.2vw, 23px); font-weight: bold; margin-bottom: 7px;}
     background: #333; 
@@ -293,6 +296,7 @@ footer{
             ul{display: flex; justify-content: space-between;}
         }
     }
+
 }
 
 //태블릿 너비 1024px 이하
@@ -302,3 +306,8 @@ footer{
     #mainvisual .intro{position: absolute; left: 60px; bottom: 80px; color: #fff;}
     header .inner{padding: 0 60px;}
 }
+
+
+
+
+//모바일 너비 

@@ -54,7 +54,7 @@ header {
   box-sizing: border-box;
   background: transparent;
   color: #fff;
-  padding: 16px 0;
+  padding: 1vw 0;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -64,9 +64,14 @@ header .inner {
   padding: 0 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header .inner h1 {
   white-space: nowrap;
+  font-size: 0;
+}
+header .inner h1 img {
+  width: 8vw;
 }
 header .inner h1 #blacklogo {
   display: none;
@@ -87,6 +92,7 @@ header.scrolled #rightmenu ul li a {
 header.scrolled #rightmenu ul li:first-child::after {
   content: "|";
   color: #000;
+  font-size: clamp(10px, 0.9vw, 20px);
 }
 header.scrolled nav ul li a {
   color: #000;
@@ -99,6 +105,9 @@ nav {
   display: flex;
 }
 
+#rightmenu {
+  vertical-align: middle;
+}
 #rightmenu ul {
   display: flex;
 }
@@ -111,12 +120,14 @@ nav {
   text-decoration: none;
   font-weight: bold;
   line-height: 47px;
+  font-size: clamp(10px, 0.9vw, 20px);
 }
 #rightmenu ul li:first-child::after {
   content: "|";
   color: #fff;
   padding-left: 16px;
   font-weight: bold;
+  font-size: clamp(10px, 0.9vw, 20px);
 }
 
 nav ul {
@@ -136,7 +147,7 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: clamp(11px, 1vw, 20px);
 }
 
 nav ul li a:hover {
@@ -244,6 +255,7 @@ nav ul li a:hover {
 
 #roomtabs {
   width: 100%;
+  white-space: nowrap;
 }
 #roomtabs input {
   display: none;
@@ -260,7 +272,7 @@ nav ul li a:hover {
   width: 50px;
   display: inline-block;
   margin-bottom: 15px;
-  margin-right: 1.5vw;
+  margin-right: 0.5vw;
 }
 #roomtabs input + label p {
   width: 50px;
@@ -541,6 +553,9 @@ footer {
   bottom: 0;
   font-size: 0.8vw;
   white-space: nowrap;
+}
+footer hr {
+  margin: 10px 0;
 }
 footer .foottitle {
   font-weight: bold;
