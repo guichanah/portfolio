@@ -36,6 +36,14 @@ var swipers = new Swiper("#magazine .mySwiper", {
 });
 
 
+var A = new EzenScrollClass(".scroll",{
+  baseline:"bottom",
+  add:-0.15,
+  
+});
+
+
+
 
 
 
