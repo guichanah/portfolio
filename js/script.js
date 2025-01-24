@@ -2,7 +2,7 @@ var menubtn = new EzenAddClass(".btn");
 
 
 var topmenu = new EzenScrollClass("header",{
-    baseline:100,
+    baseline:10,
     //markers: true
 }); 
 
@@ -38,8 +38,8 @@ var swipers = new Swiper("#magazine .mySwiper", {
 
 var A = new EzenScrollClass(".scroll",{
   baseline:"bottom",
-  add:-0.15,
-  
+  add:-0.08,
+  //markers: true
 });
 
 
