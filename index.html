@@ -19,7 +19,7 @@
                     <li><a href="#rooms">여행지</a></li>
                     <li><a href="#promotion">프로모션</a></li>
                     <li><a href="#magazine">매거진</a></li>
-                    <li id="reserve"><a class="btn" href="#subreserve">예약</a></li>
+                    <li id="reserve"><a class="button" href="#subreserve">예약</a></li>
                 </ul>
             </nav>
             <div id="rightmenu">
@@ -28,11 +28,27 @@
                     <li><a href="#English">ENG</a></li>
                 </ul>
             </div>
+            <div id="mobilemenu">
+                <ul>
+                    <li><a href="#mobilegnb" class="openmenu">
+                        <i class="xi-bars xi-2x"></i>
+                    </a></li>
+                </ul>
+            </div>
         </div>
         <div id="subreserve">
-            <div id="close" class="btn"></div>
-    
+            <div id="close" class="button"></div> 
         </div>
+        <nav id="mobilegnb">
+            <ul>
+                <li><a href="#home">한울채</a></li>
+                <li><a href="#rooms">여행지</a></li>
+                <li><a href="#promotion">프로모션</a></li>
+                <li><a href="#magazine">매거진</a></li>
+                <!--<li id="reserve"><a class="button" href="#subreserve">예약</a></li>-->
+                <li id="reserve"><a class="button" href="#booking">예약</a></li>
+            </ul>
+        </nav>
     </header>
 
 
@@ -105,15 +121,58 @@
             </div>
         </section>
         <section id="booking">
-            <div class="inner">
-                <h2>예약폼</h2>
+            <div id="reservation" class="inner">
+                <div class="search-container">
+                    <!-- 여행지 선택 (select 태그 사용) -->
+                    <div class="search-box">
+                        <div class="label">
+                            <i class="xi-maker"></i> 여행지
+                        </div>
+                        <select>
+                            <option value="전체">전체</option>
+                            <option value="제주">제주</option>
+                            <option value="강원">강원</option>
+                            <option value="경상">경상</option>
+                            <option value="서울">서울</option>
+                            <option value="전라">전라</option>
+                            <option value="경기">경기</option>
+                            <option value="충청">충청</option>
+                            <option value="부산">부산</option>
+                            <option value="인천">인천</option>
+                            <option value="광주">광주</option>
+                        </select>
+                    </div>
+            
+                    <!-- 체크인/체크아웃 -->
+                    <div class="search-box">
+                        <div class="label">
+                            <i class="xi-calendar"></i> CHECK IN / CHECK OUT
+                        </div>
+                        <div class="date-picker">
+                            <input type="date" id="check-in">
+                            <input type="date" id="check-out">
+                        </div>
+                    </div>
+            
+                    <!-- 인원 선택 -->
+                    <div class="search-box">
+                        <div class="label"><i class="xi-user-o"></i> 인원</div>
+                        <div class="guest-counter">
+                            <button>-</button>
+                            <span>2</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+            
+                    <!-- 검색 버튼 -->
+                    <button class="search-btn">검색 <i class="fas fa-search"></i></button>
+                </div>
             </div>
         </section>
         <div class="inner">
             <section id="rooms" class="scroll">
                 <div class="titles">
                     <h2>지역</h2>
-                    <p><a href="#" class="more">더보기&nbsp;<i class="xi-long-arrow-right"></i></a></p>
                 </div>
                 <div id="roomtabs">
                     <input id="tab1" type="radio" name="maintabs" checked>
@@ -161,6 +220,8 @@
                         <p><span>광주</span></p>
                     </label>
 
+                    <p class="more"><a href="#">더보기<i class="xi-arrow-right"></i></a></p>
+                    
                     <div id="roomlist">
                         <div class="locations" id="location1">
                             <div class="room">
