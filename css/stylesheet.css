@@ -159,6 +159,9 @@ nav {
 #mobilemenu {
   display: none;
 }
+#mobilemenu .xi-bars {
+  color: #000;
+}
 
 nav ul {
   white-space: nowrap;
@@ -363,7 +366,7 @@ main .scroll.scrolled {
 }
 #booking .search-btn {
   padding: 10px 100px;
-  border: 1px solid #8B4513;
+  border: 2px solid #8B4513;
   background: none;
   cursor: pointer;
   font-size: 16px;
@@ -372,6 +375,7 @@ main .scroll.scrolled {
   align-items: center;
   gap: 5px;
   white-space: nowrap;
+  font-weight: bold;
 }
 #booking .search-btn:hover {
   background: #8B4513;
@@ -894,7 +898,12 @@ footer #copyright {
     display: none;
   }
   #mobilemenu {
+    display: block;
+  }
+  #mobilemenu li a {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   header {
     background: #fff;

@@ -76,7 +76,9 @@ nav{display: flex;
     ul li:first-child::after{content: "|"; color: #fff; padding-left: 16px;  font-weight: bold; font-size: clamp(10px, 0.9vw, 20px);}
 }
 
-#mobilemenu{display: none;}
+#mobilemenu{display: none;
+    .xi-bars{color: #000;}
+}
 
 
 nav ul {
@@ -223,7 +225,7 @@ main{width: 100vw;
 
     .search-btn {
         padding: 10px 100px;
-        border: 1px solid #8B4513;
+        border: 2px solid #8B4513;
         background: none;
         cursor: pointer;
         font-size: 16px;
@@ -232,6 +234,7 @@ main{width: 100vw;
         align-items: center;
         gap: 5px;
         white-space: nowrap;
+        font-weight: bold;
     }
 
     .search-btn:hover {
@@ -486,7 +489,10 @@ footer{
     header .inner{padding: 0 20px;}
     header #gnb{display: none;}
     header #rightmenu{display: none;}
-    #mobilemenu{display: flex;}
+    #mobilemenu{display: block;
+        li a {display: flex; flex-direction: column; justify-content: center;}
+    }
+
 
     header {background: #fff; color: #333;
         .inner h1{
@@ -500,7 +506,7 @@ footer{
     }
 
 
-
+    
 
 
     #mainvisual{

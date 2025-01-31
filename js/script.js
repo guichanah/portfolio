@@ -1,4 +1,4 @@
-var menubtn = new EzenAddClass(".button");
+//var menubtn = new EzenAddClass(".button");
 
 
 var topmenu = new EzenScrollClass("header",{
