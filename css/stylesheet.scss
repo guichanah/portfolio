@@ -15,12 +15,12 @@ transition: all 0.5s;
 #subreserve.active{visibility: visible; opacity: 1; z-index: 10;}
 */
 
-#mobilegnb{width: 100%; height: 800%; background: #333; color: #fff;
-    visibility: hidden; opacity: 0; z-index: 999; position:absolute; top: 43.98px; left: 0;
+#mobilegnb{width: 100%; height: 851%; background: #333; color: #fff;
+    visibility: hidden; opacity: 0; z-index: 999; position:absolute; top: 40.59px; left: 0;
     transition: all 0.5s;
     ul{width: 100%; display: flex; flex-direction: column; justify-content: space-evenly;
         li{width: 100%; height: 20%; border-bottom: 1px solid #fff; margin: 0;
-            a{line-height: 71.38px; font-size: 24px;}
+            a{line-height: 66.75px; font-size: 24px;}
         }
         li:last-child{border-bottom: none;}
     }
