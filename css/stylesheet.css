@@ -988,13 +988,18 @@ footer #copyright {
   }
   #rooms {
     height: 400px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+  }
+  #rooms .titles h2 {
+    margin-bottom: 5px;
   }
   #roomtabs {
     white-space: wrap;
   }
   #roomtabs .land {
     display: block;
+    margin-bottom: -15px;
+    width: 100px;
   }
   #roomtabs label {
     display: none !important;
