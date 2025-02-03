@@ -710,6 +710,7 @@ p.more a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 }
 #magazine .caption h6 {
   margin-bottom: 10px;
@@ -1030,7 +1031,7 @@ footer #copyright {
   }
   .locations .room .roomimg .discount {
     top: 5px;
-    left: 5px;
+    left: 15px;
     width: 70px;
     height: 30px;
   }
