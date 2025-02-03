@@ -248,6 +248,7 @@ main{width: 100vw;
 }
 
 #roomtabs{width: 100%;  white-space: nowrap;
+    .land{display: none;}
     input{display: none;}
     input:checked+label p{color: #000; background: #2B2921; min-width: 40px;
         span{font-weight: bold; color: #fff; font-size: clamp(16px, 1.0vw ,20px); white-space: nowrap;}}
@@ -272,18 +273,18 @@ main{width: 100vw;
                     span{width: 100%; height: 100%; color: #fff; white-space: nowrap;
                         border-radius: 5px;}
                     .dis1{background: #017BC6; padding: 0.2vw 0.5vw; font-size: clamp(8px, 1vw,16px);}
-                    .dis2{background: #1A1A1A; padding: 0.2vw 0.5vw; font-size: clamp(8px, 1vw,16px);}
+                    .dis2{background: #C56100; padding: 0.2vw 0.5vw; font-size: clamp(8px, 1vw,16px);}
                 }
             }
         }
         .info{width: 100%; height: 10vw; box-sizing: border-box; /*outline: 1px solid gray;*/ padding: 5px 0;
             text-align: center; 
-            p:first-child{font-weight: bold; font-size: 1.3vw; margin-top: 18px; white-space: nowrap;}
-            p:nth-child(2){margin-top: 13px; font-weight: 600; font-size: 1.05vw; white-space: nowrap; color: #2B2921;}
-            p:nth-child(3){margin-top: 15px; font-weight: bold; font-size: 1vw; white-space: nowrap; color: #2B2921;}
-            p:last-child{margin-top: 10px; font-weight: bold; white-space: nowrap;
-                .price{color: #8B4513; font-weight: 900; font-size: 1vw}
-                .ogprice{color: #555; text-decoration: line-through; margin-right: 3px; font-size: 1vw}
+            p:first-child{font-weight: bold; font-size: clamp(18px, 1.3vw, 25px); margin-top: 13px; white-space: nowrap;}
+            p:nth-child(2){margin-top: 8px; font-weight: 600; font-size: clamp(16px, 1.05vw, 21px); white-space: nowrap; color: #2B2921;}
+            p:nth-child(3){margin-top: 10px; font-weight: bold; font-size:clamp(15px, 1vw, 20px); white-space: nowrap; color: #2B2921;}
+            p:last-child{margin-top: 5px; white-space: nowrap;
+                .price{color: #8B4513; font-weight: 900; font-size:clamp(15px, 1vw, 20px);}
+                .ogprice{color: #555; text-decoration: line-through; margin-right: 3px; font-size:clamp(15px, 1vw, 20px);}
             }
         }
     }
@@ -314,7 +315,7 @@ p.more{float: right; width: 80px; height: 32px; line-height: 32px; margin-left: 
         
         div{width: 23.2%; height: 100%; overflow: hidden; border-radius: 20px; position: relative;
             p:first-child{width: 100%; height: 100%;
-                img{border-radius: 20px; width: 100%; height: 100%; transition: all .3s;}
+                img{border-radius: 20px; width: 100%;  height: 100%; transition: all .3s;}
                 img:hover{scale: 1.1; }
             }
             .travelp{color: #fff; font-size:clamp(18px, 1.7vw, 33px);  font-weight: bolder;
@@ -377,7 +378,7 @@ p.more{float: right; width: 80px; height: 32px; line-height: 32px; margin-left: 
 
     .caption p {
         margin: 0;
-        font-size: 1.1vw;
+        font-size: clamp(14px, 1.1vw, 22px);
         font-weight: 300;
     }
 }
@@ -397,6 +398,7 @@ p.more{float: right; width: 80px; height: 32px; line-height: 32px; margin-left: 
                 padding: 10px 50px; height: 47px; line-height: 47px; width: 150px; font-weight: bold;
                 span{font-size: 20px;}
             }
+            a:hover{color: #8B4513; background: #fff;}
         }
     }
 }
@@ -407,7 +409,7 @@ p.more{float: right; width: 80px; height: 32px; line-height: 32px; margin-left: 
 
 
 footer{
-    hr{margin: 10px 0;}
+    hr{margin: 25px 0;}
     .foottitle{font-weight: bold;}
     .phone{font-size: clamp(24px, 1.6vw, 30px); font-weight: bold; margin: -6px 0 6px;}
     background: #333; 
@@ -423,7 +425,7 @@ footer{
         }
     }
     #footercontent{display: flex; justify-content: space-between; font-size: clamp(12px, 0.8vw, 20px);
-        #firstfoot{display: flex; width: 30%;
+        #firstfoot{display: flex;
             #qus{width: 30%; line-height: 1.5;}
             #ans{width: 70%; line-height: 1.5;}
         }
@@ -476,11 +478,12 @@ footer{
 
 
 
-//모바일 너비 450px 이하
+//모바일 너비 430px 이하
 @media all and (max-width:430px){
     
     .inner{padding: 0 20px;}
     .search-container{display: flex; flex-direction: column;}
+    .container{padding: 0 20px 0 20px;}
     #mainvisual{
         height: 520px;
     #pager .prev p img,
@@ -530,18 +533,83 @@ footer{
 
 
 
-
-
-
-
-    #booking{
+    #booking{ height: 300px; margin: 0 0 50px 0;
+        #reservation.inner .search-container{gap: 15px;}
         .inner{padding: 0 20px;}
         .label{white-space: wrap;}
-
+        .search-box{text-align: center; align-items: center;}
+        select{
+            option{text-align: center;}
+        }
     }
 
-    
-    #roomtabs{white-space: wrap;}
+    #rooms{height: 400px; margin-bottom: 80px;}
 
-    footer{white-space: wrap;}
+    #roomtabs{white-space: wrap;
+        .land{display: block;}
+    }
+    #roomtabs label{display: none !important;}
+    #roomlist{height: 500px;}
+    .locations{white-space: wrap; flex-wrap: wrap;
+        .room{width: 48%; height: 18vh;
+            .roomimg{width: 100%; height: 100%;}
+            .info{
+                p:nth-child(2){white-space: wrap; word-break: keep-all;}
+            }
+        }
+        .room.skiproom{display: none;}
+    }
+
+
+
+    #travel{margin-bottom: 100px; width: 100%; height: 420px; box-sizing: border-box;
+        #travellist{height: 200px; flex-wrap: wrap; box-sizing: border-box;
+            #nature, #spot, #entertainment, #food{width: 49%; margin-bottom: 8px; box-sizing: border-box;}
+        }
+    }
+
+
+    #promotion{
+        #bannerp{
+            h3{font-size: 16px; margin: 10px 0 12px;}
+            p{font-size: 12px;
+                span{font-size: 16px}
+            }
+        }
+    }
+
+    #magazine{
+        .swiper-wrapper{width: 60%;}
+    }
+
+    #ads{
+        height: 300px;
+        #adstitle{
+            p:nth-child(2){padding: 0 25px; word-break: keep-all;}
+            p:nth-child(3){height: 50%;}
+        }
+    }
+
+    footer{height: 550px;
+        #footerlogo{ margin-bottom: 15px;
+            p{
+                img{width: 15vw;}
+            }
+        }
+        #footercontent{display: flex; flex-direction: column;
+            
+            #fisrtfoot{display: flex; flex-direction: row; justify-content: space-evenly; width: 100%;}
+            .foottitle{font-size: 16px; margin-top: 10px;}
+            .phone{font-size: 15px;}
+            #secondfoot ul>div{display: flex;
+                li{margin-right: 30px;}
+            }
+            #forthfoot>ul{display: flex; justify-content: space-evenly; gap: 0px;}
+        }
+        #footercontent>div{margin-bottom: 10px;}
+        hr{display: none;}
+        #copyright{ width: 100%; white-space: wrap; margin-top: 10px;
+            p{font-size: 14px;}
+        }
+    }
 }

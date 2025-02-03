@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOICA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+
+<body>
+
+    <!-------Header------->
+    <header>
+        <div class="inner">
+            <div class="head-body">
+                <div class="inner">
+                    <h1 class="logo"><a href="/"><img src="images/logo_a.png" alt=""></a></h1>
+                    <div class="head-right">
+                        <ul>
+                            <li><a href=""><img src="images/search.png" alt="">통합검색</a></li>
+                            <li><a href="https://iuser.koica.go.kr/user/loginView.do"><img src="images/login.png"
+                                        alt="">로그인</a></li>
+                            <li><a href="https://iuser.koica.go.kr/join/agreeView.do"><img src="images/join.png"
+                                        alt="">회원가입</a></li>
+                            <li>
+                                <div class="head-dropdown">
+                                    <button><img src="images/Language.png" alt="">Language</button>
+                                    <div class="head-dropdown-content">
+                                        <a href="">KO</a>
+                                        <a href="https://www.koica.go.kr/sites/koica_en/index.do">EN</a>
+                                    </div><!--//.head-dropdown-content-->
+                                </div><!--//.head-dropdown-->
+                            </li>
+                        </ul>
+                    </div><!--//.head-right-->
+                </div><!--//.inner-->
+            </div><!--//.head-body-->
+
+            <div class="head-gnb">
+                <div class="head-inner">
+                    <nav class="gnb">
+                        <ul>
+                            <li class="depth_1"><a href="">ODA 지식</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li class="depth_2"><a href="">KOICA 오픈데이터포털</a></li>
+                                        <li class="depth_2"><a href="">ODA 도서관</a></li>
+                                        <li class="depth_2"><a href="">국제개발협력 용어집</a></li>
+                                        <li class="depth_2"><a href="">지식서비스</a></li>
+                                        <li class="depth_2"><a href="">개발협력동향</a></li>
+                                        <li class="depth_2"><a href="">연구보고서</a></li>
+                                        <li class="depth_2"><a href="">ODA연구 알리미</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="depth_1"><a href="">주요사업</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li class="depth_2"><a href="">사업전략 및 정책</a></li>
+                                        <li class="depth_2"><a href="">추진방향</a></li>
+                                        <li class="depth_2"><a href="">추진실적</a></li>
+                                        <li class="depth_2"><a href="">분야별 지원현황</a></li>
+                                        <li class="depth_2"><a href="">지역별현황</a></li>
+                                        <li class="depth_2"><a href="">형태별 지원현황</a></li>
+                                        <li class="depth_2"><a href="">사업평가</a></li>
+                                        <li class="depth_2"><a href="">ABC 프로그램 추진 실적</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="depth_1"><a href="">국민참여·일자리</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li class="depth_2"><a href="">전체일정</a></li>
+                                        <li class="depth_2"><a href="">기관공모</a></li>
+                                        <li class="depth_2"><a href="">입찰정보</a></li>
+                                        <li class="depth_2"><a href="">개발협력 좋은 일자리</a></li>
+                                        <li class="depth_2"><a href="">행사</a></li>
+                                        <li class="depth_2"><a href="">교육 및 자격시험</a></li>
+                                        <li class="depth_2"><a href="">유관기관공지</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="depth_1"><a href="">알림·홍보</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li class="depth_2"><a href="">공지사항</a></li>
+                                        <li class="depth_2"><a href="">KOICA 보도자료</a></li>
+                                        <li class="depth_2"><a href="">해외 ODA 활동</a></li>
+                                        <li class="depth_2"><a href="">해외 ODA 사진</a></li>
+                                        <li class="depth_2"><a href="">홍보자료</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="depth_1"><a href="">고객과 통</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li class="depth_2"><a href="">고객의 소리</a></li>
+                                        <li class="depth_2"><a href="">국민제안방</a></li>
+                                        <li class="depth_2"><a href="">기업성장응답센터</a></li>
+                                        <li class="depth_2"><a href="">고객신고</a></li>
+                                        <li class="depth_2"><a href="">KOICA 견학 및 방문</a></li>
+                                        <li class="depth_2"><a href="">KOICA 편의시설 이용신청</a></li>
+                                        <li class="depth_2"><a href="">제증명서 발급센터</a></li>
+                                        <li class="depth_2"><a href="">설문조사</a></li>
+                                        <li class="depth_2"><a href="">글로벌 ODA 기업진출센터</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="depth_1"><a href="">정보공개</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li class="depth_2"><a href="">정보공개 제도 및 청구</a></li>
+                                        <li class="depth_2"><a href="">정보목록</a></li>
+                                        <li class="depth_2"><a href="">사전정보공표</a></li>
+                                        <li class="depth_2"><a href="">공공 정보 개방</a></li>
+                                        <li class="depth_2"><a href="">사업실명제</a></li>
+                                        <li class="depth_2"><a href="">예결산 현황</a></li>
+                                        <li class="depth_2"><a href="">기타공개</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="depth_1"><a href="">KOICA 소개</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li class="depth_2"><a href="">KOICA</a></li>
+                                        <li class="depth_2"><a href="">인권경영</a></li>
+                                        <li class="depth_2"><a href="">ESG 경영</a></li>
+                                        <li class="depth_2"><a href="">사회적가치경영</a></li>
+                                        <li class="depth_2"><a href="">윤리준법경영</a></li>
+                                        <li class="depth_2"><a href="">고객만족경영</a></li>
+                                        <li class="depth_2"><a href="">안전경영</a></li>
+                                        <li class="depth_2"><a href="">경영공시</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="gnb-sub-bg"></div>
+                    </nav><!--//.gnb-->
+                </div><!--//.head-inner-->
+            </div><!--//.head-gnb-->
+        </div>
+    </header>
+
+    <!-------Main------->
+    <main>
+        <section id="main-banner">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <dl id="banner-type1">
+                            <dt>
+                                보편적 가치와 상생의 국익을 추구하는<br>
+                                <strong>선도적 글로벌 개발협력기관</strong>
+                            </dt>
+                            <dd>Korea International Cooperation Agency</dd>
+                        </dl>
+                        <p><img src="images/banner_01.jpg" alt=""></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <dl id="banner-type2">
+                            <dt>
+                                포용과 상생의 개발협력으로<br>
+                                <strong>인류 공영과 세계평화 증진</strong>에 기여
+                            </dt>
+                            <dd>Korea International Cooperation Agency</dd>
+                        </dl>
+                        <p><img src="images/banner_02.jpg" alt=""></p>
+                    </div>
+                </div><!--//.swiper-wrapper-->
+
+                <!-- pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div><!--//.swiper-->
+        </section><!--//#main_banner-->
+
+        <!--
+        <section class="know-list">
+            <div class="know-inner">
+                <h2 class="hidden">know-list</h2>
+                <ul>
+                    <li class="know-list-left"><button class="btn first">국민참여 · 일자리 한번에 찾기</button></li>
+                    <li class="know-list-right"><button class="btn first">지식서비스</button></li>
+                </ul>
+
+                <div class="knowbox know1">
+                    <ul>
+                        <li>국민참여·일자리 한번에 찾기</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <section id="favorite-menu" class="clearfix">
+            <div class="favorite-inner">
+                <div class="swiper favorite-Swiper">
+                    <h2>자주 찾는 메뉴</h2>
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/983/subview.do"><img
+                                    src="images/favorite_1_입찰정보.png" alt="">
+                                <p>입찰정보</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/851/subview.do"><img
+                                    src="images/favorite_2_미션·비전.png" alt="">
+                                <p>미션·비전</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/933/subview.do"><img
+                                    src="images/favorite_3_지역별 지원현황.png" alt="">
+                                <p>지역별 지원현황</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/894/subview.do"><img
+                                    src="images/favorite_4_ODA 지식정보.png" alt="">
+                                <p>ODA 지식정보</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/8146/subview.do"><img
+                                    src="images/favorite_5_ABC프로그램 추진 실적.png" alt="">
+                                <p>ABC프로그램<br>추진 실적</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/938/subview.do"><img
+                                    src="images/favorite_6_형태별 지원현황.png" alt="">
+                                <p>형태별 지원현황</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/902/subview.do"><img
+                                    src="images/favorite_7_분야별 지원현황.png" alt="">
+                                <p>분야별 지원현황</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/978/subview.do"><img
+                                    src="images/favorite_8_국민참여·일자리.png" alt="">
+                                <p>국민참여·일자리</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/884/subview.do"><img
+                                    src="images/favorite_9_시설 및 위치안내.png" alt="">
+                                <p>시설 및 위치안내</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/1002/subview.do"><img
+                                    src="images/favorite_10_홍보자료.png" alt="">
+                                <p>홍보자료</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/1083/subview.do"><img
+                                    src="images/favorite_11_사전정보공표.png" alt="">
+                                <p>사전정보공표</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/853/subview.do"><img
+                                    src="images/favorite_12_연혁.png" alt="">
+                                <p>연혁</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/1014/subview.do"><img
+                                    src="images/favorite_13_KOICA고객센터.png" alt="">
+                                <p>KOICA고객센터</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/sites/cts_kr/index.do"><img
+                                    src="images/favorite_14_CTS.png" alt="">
+                                <p>CTS</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/867/subview.do"><img
+                                    src="images/favorite_15_직원채용.png" alt="">
+                                <p>직원채용</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/koica_kr/1058/subview.do"><img
+                                    src="images/favorite_16_제증명 발급센터.png" alt="">
+                                <p>제증명 발급센터</p>
+                            </a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/sites/internship_kr/index.do"><img
+                                    src="images/favorite_17_인턴.png" alt="">
+                                <p>인턴</p>
+                            </a></li>
+                    </ul><!--//.swiper-wrapper-->
+                </div><!--//.swiper .favorite-Swiper-->
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div><!--//.favorite-inner-->
+        </section><!--//#favorite-menu-->
+
+        <section class="notice">
+            <h2>NOTICE</h2>
+            <div class="notice-inner">
+                <div class="tab-content">
+
+                    <input type="radio" name="tabmenu" id="tab01" checked></input>
+                    <label for="tab01" class="notice-label">입찰정보</label>
+                    <input type="radio" name="tabmenu" id="tab02"></input>
+                    <label for="tab02" class="notice-label">기관공모</label>
+
+                    <div class="tab-con-btn con1">
+                        <a href="https://www.koica.go.kr/koica_kr/983/subview.do">더보기+</a>
+                    </div>
+                    <div class="tab-con-btn con2">
+                        <a
+                            href="https://www.koica.go.kr/koica_kr/982/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYyOTElMkZhcnRjbExpc3QuZG8lM0Y%3D">더보기+</a>
+                    </div>
+
+                    <div class="conbox con1">
+                        <ul>
+                            <li>
+                                <a href="https://nebid.koica.go.kr/oep/bepb/popup/beffatPblancInfoDetail.do?P_BEFFAT_PBLANC_NO=W202500003"
+                                    target="_blank">
+                                    <p>[사전공고]&nbsp;&nbsp;공공데이터 개방·품질 개선 및 데이터 기반 행정 활성화 컨설팅 용역</p>
+                                </a>
+                                <span>2025-01-06</span>
+                            </li>
+                            <li>
+                                <a href="https://nebid.koica.go.kr/oep/bepb/popup/beffatPblancInfoDetail.do?P_BEFFAT_PBLANC_NO=W202500001"
+                                    target="_blank">
+                                    <p>[사전공고]&nbsp;&nbsp;KOICA 분쟁 및 취약국 8대 프로그램(2024-2027) 성과관리 기술지원 용역</p>
+                                </a>
+                                <span>2025-01-03</span>
+                            </li>
+                            <li>
+                                <a href="https://nebid.koica.go.kr/oep/bepb/popup/beffatPblancInfoDetail.do?P_BEFFAT_PBLANC_NO=W202400223"
+                                    target="_blank">
+                                    <p>[사전공고]&nbsp;&nbsp;인도네시아 지역사회 회복력 강화를 위한 맹그로브 숲 복원 모델 수립 사업 PMC 용역</p>
+                                </a>
+                                <span>2024-12-31</span>
+                            </li>
+                            <li>
+                                <a href="https://nebid.koica.go.kr/oep/bepb/popup/beffatPblancInfoDetail.do?P_BEFFAT_PBLANC_NO=W202400224"
+                                    target="_blank">
+                                    <p>[사전공고]&nbsp;&nbsp;에티오피아 농업 및 농가공 제품 경쟁력 향상을 위한 국가 품질 관리 강화 사업 PMC 용역</p>
+                                </a>
+                                <span>2024-12-30</span>
+                            </li>
+                        </ul>
+                    </div><!--//.conbox con1-->
+                    <div class="conbox con2">
+                        <ul>
+                            <li>
+                                <a
+                                    href="https://www.koica.go.kr/koica_kr/982/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYyOTElMkYzODcwNDQlMkZhcnRjbFZpZXcuZG8lM0Y%3D">
+                                    <p>[인도적 지원]&nbsp;&nbsp;KOICA 인도적 지원 혁신 인큐베이팅 프로그램 참여기업 모집 안내</p>
+                                </a>
+                                <span>2024-12-31</span>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.koica.go.kr/koica_kr/982/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYyOTElMkYzODY2ODIlMkZhcnRjbFZpZXcuZG8lM0Y%3D">
+                                    <p>[시민사회협회]&nbsp;&nbsp;2025 KOICA 민관협력 인큐베이팅(시민사회 파트너) 참여단체 공모(~11/22)</p>
+                                </a>
+                                <span>2024-11-07</span>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.koica.go.kr/koica_kr/982/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYyOTElMkYzODY2MjglMkZhcnRjbFZpZXcuZG8lM0Y%3D">
+                                    <p>[기타공모]&nbsp;&nbsp;2025-2026년 대학원 국제개발협력 전문가 양성사업 공모 제안서 제출 방식 변경 안내 (KOPIS →
+                                        전자문서시스템)</p>
+                                </a>
+                                <span>2024-11-01</span>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.koica.go.kr/koica_kr/982/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYyOTElMkYzODY2MjclMkZhcnRjbFZpZXcuZG8lM0Y%3D">
+                                    <p>[기타공모]&nbsp;&nbsp;2025년 대학교 국제개발협력 이해증진사업 공모 제안서 제출 방식 변경 안내 (KOPIS → 전자문서시스템)
+                                    </p>
+                                </a>
+                                <span>2024-11-01</span>
+                            </li>
+                        </ul>
+                    </div><!--//.conbox con2-->
+                </div><!--//.tab-content-->
+
+                <div class="notice-content">
+                    <h3>공지사항<span><a href="">더보기 +</a></span></h3>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.koica.go.kr/koica_kr/989/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYxNTAlMkYzODcwMzElMkZhcnRjbFZpZXcuZG8lM0Y%3D">
+                                <p>[공지사항]&nbsp;&nbsp;공공기관 고객만족도조사 관련 개인정보 제3자 제공사항 알림</p>
+                            </a>
+                            <span>2024-12-30</span>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.koica.go.kr/koica_kr/989/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYxNTAlMkYzODcwMjElMkZhcnRjbFZpZXcuZG8lM0Y%3D">
+                                <p>[공지사항]&nbsp;&nbsp;KOICA 중장기 경영목표 대외인식도 설문조사(~12.31.)</p>
+                            </a>
+                            <span>2024-12-26</span>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.koica.go.kr/koica_kr/989/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYxNTAlMkYzODY5NTYlMkZhcnRjbFZpZXcuZG8lM0Y%3D">
+                                <p>[내부규정 입안예고]&nbsp;&nbsp;「ODA연구·교육원 관련 내규」개정(안) 3건 입안예고</p>
+                            </a>
+                            <span>2024-12-18</span>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.koica.go.kr/koica_kr/989/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa29pY2Ffa3IlMkYxNTAlMkYzODY5NDclMkZhcnRjbFZpZXcuZG8lM0Y%3D">
+                                <p>[내부규정 입안예고]&nbsp;&nbsp;「ODA연구·교육원 관련 내규」개정(안) 3건 입안예고</p>
+                            </a>
+                            <span>2024-12-18</span>
+                        </li>
+                    </ul>
+                </div><!--//.notice-content-->
+            </div><!--//.notice-inner-->
+        </section><!--//.notice-->
+
+        <div class="main-bt">
+            <section class="office-select">
+                <h2>KOICA 해외사무소</h2>
+                <div class="inner">
+                    <select class="land" title="지역 선택" onchange="showCountry(this.options[this.selectedIndex].value)">
+                        <option value="">지역</option>
+                        <option value="1">아시아</option>
+                        <option value="2">아프리카</option>
+                        <option value="3">중남미</option>
+                        <option value="4">중동</option>
+                        <option value="5">유라시아</option>
+                    </select><!--//.land-->
+                    <div>
+                        <select class="land-detail" title="세부지역 선택">
+                            <option value="">지역을 선택하세요</option>
+                        </select><!--//.land-detail-->
+                        <select class="land-detail" title="아시아" id="select-country1" style="display: none;">
+                            <option value="">해외사무소</option>
+                            <option value="">네팔</option>
+                            <option value="">동티모르</option>
+                            <option value="">라오스</option>
+                            <option value="">미얀마</option>
+                            <option value="">방글라데시</option>
+                            <option value="">베트남</option>
+                            <option value="">스리랑카</option>
+                            <option value="">아프가니스탄</option>
+                            <option value="">인도</option>
+                            <option value="">인도네시아</option>
+                            <option value="">캄보디아</option>
+                            <option value="">파키스탄</option>
+                            <option value="">피지</option>
+                            <option value="">필리핀</option>
+                        </select><!--//.land-detail-->
+                        <select class="land-detail" title="아프리카" id="select-country2" style="display: none;">
+                            <option value="">해외사무소</option>
+                            <option value="">가나</option>
+                            <option value="">나이지리아</option>
+                            <option value="">르완다</option>
+                            <option value="">모로코</option>
+                            <option value="">모잠비크</option>
+                            <option value="">세네갈</option>
+                            <option value="">알제리</option>
+                            <option value="">에티오피아</option>
+                            <option value="">우간다</option>
+                            <option value="">이집트</option>
+                            <option value="">카메룬</option>
+                            <option value="">케냐</option>
+                            <option value="">DR 콩고</option>
+                            <option value="">탄자니아</option>
+                            <option value="">튀니지</option>
+                        </select><!--//.land-detail-->
+                        <select class="land-detail" title="중남미" id="select-country3" style="display: none;">
+                            <option value="">해외사무소</option>
+                            <option value="">과테말라</option>
+                            <option value="">도미니카</option>
+                            <option value="">볼리비아</option>
+                            <option value="">에콰도르</option>
+                            <option value="">엘살바도르</option>
+                            <option value="">콜롬비아</option>
+                            <option value="">파라과이</option>
+                            <option value="">페루</option>
+                        </select><!--//.land-detail-->
+                        <select class="land-detail" title="중동" id="select-country4" style="display: none;">
+                            <option value="">해외사무소</option>
+                            <option value="">요르단</option>
+                            <option value="">이라크</option>
+                            <option value="">팔레스타인</option>
+                        </select><!--//.land-detail-->
+                        <select class="land-detail" title="유라시아" id="select-country5" style="display: none;">
+                            <option value="">해외사무소</option>
+                            <option value="">몽골</option>
+                            <option value="">아제르바이잔</option>
+                            <option value="">우즈베키스탄</option>
+                            <option value="">키르기스스탄</option>
+                        </select><!--//.land-detail-->
+                    </div>
+
+                    <div class="office-btn">
+                        <button>바로가기</button>
+                    </div>
+                </div><!--//.inner-->
+            </section><!--//.office-select-->
+
+            <section class="popupzone">
+                <h2>POPUP ZONE</h2>
+                <div class="pop-inner">
+
+                </div><!--//.pop-inner-->
+            </section><!--//.popupzone-->
+        </div><!--//.main-bt-->
+
+        <section>
+            <div class="fnct-wrap">
+
+            </div><!--//.fnct-wrap-->
+        </section>
+
+        <section class="sns">
+            <h2>KOICA SNS<span><a href="https://www.youtube.com/@officialKOICA" target="_blank">더보기 +</a></span>
+            </h2>
+            <div class="inner">
+                <iframe width="560" height="230" src="https://www.youtube.com/embed/wancfOHMSZs?si=umlYaMSgQHD4rN7L"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="230" src="https://www.youtube.com/embed/RKnXbsOg6xo?si=qXQSr0rK3BtJWCXQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div><!--//.inner-->
+        </section><!--//.sns-->
+    </main>
+
+    <!-------Footer------->
+    <footer>
+        <div id="footer-banner" class="clearfix">
+            <div class="footer-inner">
+                <div class="swiper footer-Swiper">
+                    <h2 class="hidden">배너모음</h2>
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/sites/cts_kr/index.do"
+                                target="_blank"><img src="images/banner_1.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="https://www.ffsb.kr/" target="_blank"><img
+                                    src="images/banner_2.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="https://job.koica.go.kr/" target="_blank"><img
+                                    src="images/banner_3.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="https://dak.koica.go.kr/" target="_blank"><img
+                                    src="images/banner_4.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="http://www.worldfriendskorea.or.kr/" target="_blank"><img
+                                    src="images/banner_5.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="https://www.kosha.or.kr/kosha/data/activity_C.do"
+                                target="_blank"><img src="images/banner_6.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="https://koica.go.kr/sites/ciat/index.do" target="_blank"><img
+                                    src="images/banner_7.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="https://wfv.koica.go.kr/" target="_blank"><img
+                                    src="images/banner_8.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="https://www.koica.go.kr/popup/globalVillage.do"
+                                target="_blank"><img src="images/banner_9.png" alt=""></a></li>
+                        <li class="swiper-slide"><a href="https://www.odakorea.go.kr/kor/Main" target="_blank"><img
+                                    src="images/banner_10.png" alt=""></a></li>
+                    </ul><!--//.swiper-wrapper-->
+                </div><!--//.swiper .footer-Swiper-->
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div><!--//.footer-inner-->
+        </div><!--//#footer-banner-->
+
+        <div class="inner">
+            <div class="footer-top">
+                <div class="f-logo">
+                    <h1><img src="images/logo_bt.png" alt=""></h1>
+                </div><!--//.f-logo-->
+                <div class="f-dropdown">
+                    <button>서비스바로가기</button>
+                    <div class="f-dropdown-content">
+                        <a href="https://www.ejidc.org/" target="_blank">KOICA 학술지</a>
+                        <a href="https://koica.go.kr/sites/ciat/index.do" target="_blank">KOICA CIAT</a>
+                        <a href="https://koica.go.kr/sites/evaluation_kr/index.do" target="_blank">KOICA 사업평가정보</a>
+                        <a href="https://www.oda.go.kr/opo/nmasc/main.do" target="_blank">KOICA 오픈데이터포털</a>
+                        <a href="https://lib.koica.go.kr/" target="_blank">KOICA ODA 도서관</a>
+                        <a href="https://oda.koica.go.kr/main/Main.do" target="_blank">KOICA ODA 교육원</a>
+                        <a href="https://nebid.koica.go.kr/oep/masc/mainPageForm.do" target="_blank">KOICA 전자조달시스템</a>
+                        <a href="https://kopis.koica.go.kr/ocs/" target="_blank">KOICA 파트너 협업</a>
+                        <a href="https://kov.koica.go.kr/ho/main.do" target="_blank">KOICA 봉사단</a>
+                        <a href="https://www.koica.go.kr/sites/seouloda_kr/index.do" target="_blank">Seoul ODA</a>
+                    </div><!--//.f-dropdown-content-->
+                </div><!--//.f-dropdown-->
+            </div><!--//.footer-top-->
+            <div class="f-cnt">
+                <div class="f-info">
+                    <p>(13449) 경기도 성남시 수정구 대왕판교로 825 한국국제협력단</p>
+                </div><!--//.f-info-->
+                <div class="f-cs">
+                    <ul>
+                        <li><strong>TEL</strong>&nbsp;&nbsp;:&nbsp;&nbsp;1588-0434</li>
+                        <li><strong>FAX</strong>&nbsp;&nbsp;:&nbsp;&nbsp;031-740-0260</li>
+                    </ul>
+                </div><!--//.f-cs-->
+                <div class="f-link">
+                    <div class="link-go">
+                        <a href="https://www.koica.go.kr/koica_kr/1051/subview.do">찾아오는 길<img src="images/btn_f.png"
+                                alt=""></a>
+                    </div><!--//.link-go-->
+                    <div class="link-sns">
+                        <a href="https://blog.naver.com/prkoica" target="_blank"><img src="images/blog.png" alt=""></a>
+                        <a href="https://www.facebook.com/officialKOICA" target="_blank"><img src="images/facebook.png"
+                                alt=""></a>
+                        <a href="https://www.instagram.com/officialkoica/" target="_blank"><img
+                                src="images/instagram.png" alt=""></a>
+                        <a href="https://www.youtube.com/user/officialKOICA" target="_blank"><img
+                                src="images/youtube.png" alt=""></a>
+                    </div><!--//.link-sns-->
+                </div><!--//.f-link-->
+            </div><!--//.f-cnt-->
+        </div><!--//.inner-->
+
+        <div class="footer-btn">
+            <div class="f-btn">
+                <div class="f-btm-text">
+                    <ul>
+                        <li><a href="https://www.koica.go.kr/koica_kr/1095/subview.do"><span>개인정보 처리방침</span></a></li>
+                        <li><a href="https://www.koica.go.kr/koica_kr/1096/subview.do">책임의 한계 및 법적고지</a></li>
+                        <li><a href="https://www.koica.go.kr/koica_kr/1097/subview.do">이메일주소 무단수집거부</a></li>
+                    </ul>
+                    <p>COPYRIGHTⓒ KOREA INTERNATIONAL COOPERATION AGENCY ALL RIGHTS RESERVED.</p>
+                </div><!--//.f-btm-text-->
+            </div><!--//.f-btn-->
+        </div><!--//.footer-btn-->
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!--스와이퍼 플러그인 연결-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="EzenAddClass.js"></script>
+
+    <script src="EzenScrollClass.js"></script>
+
+    <!--스와이퍼 실행(호출)-->
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

@@ -391,6 +391,9 @@ main .scroll.scrolled {
   width: 100%;
   white-space: nowrap;
 }
+#roomtabs .land {
+  display: none;
+}
 #roomtabs input {
   display: none;
 }
@@ -478,7 +481,7 @@ main .scroll.scrolled {
   font-size: clamp(8px, 1vw, 16px);
 }
 .locations .room .roomimg .discount p .dis2 {
-  background: #1A1A1A;
+  background: #C56100;
   padding: 0.2vw 0.5vw;
   font-size: clamp(8px, 1vw, 16px);
 }
@@ -491,39 +494,38 @@ main .scroll.scrolled {
 }
 .locations .room .info p:first-child {
   font-weight: bold;
-  font-size: 1.3vw;
-  margin-top: 18px;
+  font-size: clamp(18px, 1.3vw, 25px);
+  margin-top: 13px;
   white-space: nowrap;
 }
 .locations .room .info p:nth-child(2) {
-  margin-top: 13px;
+  margin-top: 8px;
   font-weight: 600;
-  font-size: 1.05vw;
+  font-size: clamp(16px, 1.05vw, 21px);
   white-space: nowrap;
   color: #2B2921;
 }
 .locations .room .info p:nth-child(3) {
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: bold;
-  font-size: 1vw;
+  font-size: clamp(15px, 1vw, 20px);
   white-space: nowrap;
   color: #2B2921;
 }
 .locations .room .info p:last-child {
-  margin-top: 10px;
-  font-weight: bold;
+  margin-top: 5px;
   white-space: nowrap;
 }
 .locations .room .info p:last-child .price {
   color: #8B4513;
   font-weight: 900;
-  font-size: 1vw;
+  font-size: clamp(15px, 1vw, 20px);
 }
 .locations .room .info p:last-child .ogprice {
   color: #555;
   text-decoration: line-through;
   margin-right: 3px;
-  font-size: 1vw;
+  font-size: clamp(15px, 1vw, 20px);
 }
 
 main .locations {
@@ -716,7 +718,7 @@ p.more a {
 }
 #magazine .caption p {
   margin: 0;
-  font-size: 1.1vw;
+  font-size: clamp(14px, 1.1vw, 22px);
   font-weight: 300;
 }
 
@@ -764,6 +766,10 @@ p.more a {
 #ads #adstitle p:nth-child(3) a span {
   font-size: 20px;
 }
+#ads #adstitle p:nth-child(3) a:hover {
+  color: #8B4513;
+  background: #fff;
+}
 
 footer {
   background: #333;
@@ -775,7 +781,7 @@ footer {
   white-space: nowrap;
 }
 footer hr {
-  margin: 10px 0;
+  margin: 25px 0;
 }
 footer .foottitle {
   font-weight: bold;
@@ -803,7 +809,6 @@ footer #footercontent {
 }
 footer #footercontent #firstfoot {
   display: flex;
-  width: 30%;
 }
 footer #footercontent #firstfoot #qus {
   width: 30%;
@@ -880,6 +885,9 @@ footer #copyright {
   .search-container {
     display: flex;
     flex-direction: column;
+  }
+  .container {
+    padding: 0 20px 0 20px;
   }
   #mainvisual {
     height: 520px;
@@ -958,16 +966,149 @@ footer #copyright {
   #mainvisual .intro p:nth-child(4) {
     margin-top: 270px;
   }
+  #booking {
+    height: 300px;
+    margin: 0 0 50px 0;
+  }
+  #booking #reservation.inner .search-container {
+    gap: 15px;
+  }
   #booking .inner {
     padding: 0 20px;
   }
   #booking .label {
     white-space: wrap;
   }
+  #booking .search-box {
+    text-align: center;
+    align-items: center;
+  }
+  #booking select option {
+    text-align: center;
+  }
+  #rooms {
+    height: 400px;
+    margin-bottom: 80px;
+  }
   #roomtabs {
     white-space: wrap;
   }
-  footer {
+  #roomtabs .land {
+    display: block;
+  }
+  #roomtabs label {
+    display: none !important;
+  }
+  #roomlist {
+    height: 500px;
+  }
+  .locations {
     white-space: wrap;
+    flex-wrap: wrap;
+  }
+  .locations .room {
+    width: 48%;
+    height: 18vh;
+  }
+  .locations .room .roomimg {
+    width: 100%;
+    height: 100%;
+  }
+  .locations .room .info p:nth-child(2) {
+    white-space: wrap;
+    word-break: keep-all;
+  }
+  .locations .room.skiproom {
+    display: none;
+  }
+  #travel {
+    margin-bottom: 100px;
+    width: 100%;
+    height: 420px;
+    box-sizing: border-box;
+  }
+  #travel #travellist {
+    height: 200px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  #travel #travellist #nature, #travel #travellist #spot, #travel #travellist #entertainment, #travel #travellist #food {
+    width: 49%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+  }
+  #promotion #bannerp h3 {
+    font-size: 16px;
+    margin: 10px 0 12px;
+  }
+  #promotion #bannerp p {
+    font-size: 12px;
+  }
+  #promotion #bannerp p span {
+    font-size: 16px;
+  }
+  #magazine .swiper-wrapper {
+    width: 60%;
+  }
+  #ads {
+    height: 300px;
+  }
+  #ads #adstitle p:nth-child(2) {
+    padding: 0 25px;
+    word-break: keep-all;
+  }
+  #ads #adstitle p:nth-child(3) {
+    height: 50%;
+  }
+  footer {
+    height: 550px;
+  }
+  footer #footerlogo {
+    margin-bottom: 15px;
+  }
+  footer #footerlogo p img {
+    width: 15vw;
+  }
+  footer #footercontent {
+    display: flex;
+    flex-direction: column;
+  }
+  footer #footercontent #fisrtfoot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  footer #footercontent .foottitle {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  footer #footercontent .phone {
+    font-size: 15px;
+  }
+  footer #footercontent #secondfoot ul > div {
+    display: flex;
+  }
+  footer #footercontent #secondfoot ul > div li {
+    margin-right: 30px;
+  }
+  footer #footercontent #forthfoot > ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0px;
+  }
+  footer #footercontent > div {
+    margin-bottom: 10px;
+  }
+  footer hr {
+    display: none;
+  }
+  footer #copyright {
+    width: 100%;
+    white-space: wrap;
+    margin-top: 10px;
+  }
+  footer #copyright p {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=stylesheet.css.map */

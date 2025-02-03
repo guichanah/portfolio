@@ -175,6 +175,20 @@
                     <h2>지역</h2>
                 </div>
                 <div id="roomtabs">
+                    <select class="land" title="지역 선택" onchange="showCountry(this.options[this.selectedIndex].value)">
+                        <option value="#tab1">전체</option>
+                        <option value="#tab2">제주</option>
+                        <option value="#tab3">강원</option>
+                        <option value="#tab4">경상</option>
+                        <option value="#tab5">서울</option>
+                        <option value="#tab6">전라</option>
+                        <option value="#tab7">경기</option>
+                        <option value="#tab8">충청</option>
+                        <option value="#tab9">부산</option>
+                        <option value="#tab10">인천</option>
+                        <option value="#tab11">광주</option>
+                    </select><!--//.land-->
+
                     <input id="tab1" type="radio" name="maintabs" checked>
                     <label for="tab1">
                         <p><span>전체</span></p>
@@ -226,18 +240,18 @@
                         <div class="locations" id="location1">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Jeolla_03.jpg" alt="전라03"></p>
+                                    <p><a href="#"><img src="images/Jeolla_03.jpg" alt="전라03"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>지선댁</p>
                                     <p>할머니 집에 온 듯 온정이 담긴 곳</p>
-                                    <p>전라 / 남원시</p>	
+                                    <p><i class="xi-maker"></i>전라 / 남원시</p>	
                                     <p><span class="price">290,000원</span></p>
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Gyeonggi_03.jpg" alt="경기03"></p>
+                                    <p><a href="#"><img src="images/Gyeonggi_03.jpg" alt="경기03"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                         <p><span class="dis2">프로모션</span></p>
@@ -246,18 +260,18 @@
                                 <div class="info">
                                     <p>한옥에세이 누하</p>
                                     <p>현대적인 별서(別墅)의 공간</p>
-                                    <p>경기 / 수원시</p>	
+                                    <p><i class="xi-maker"></i>경기 / 수원시</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;490,000원&nbsp;&nbsp;</span> <span class="price">450,000원</span></p>
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Incheon_03.jpg" alt="인천03"></p>
+                                    <p><a href="#"><img src="images/Incheon_03.jpg" alt="인천03"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>안길사가</p>
                                     <p>안국동 선비의 집</p>
-                                    <p>인천 / 동구</p>	
+                                    <p><i class="xi-maker"></i>인천 / 동구</p>	
                                     <p><span class="price">430,000원</span></p>
                                 </div>
                             </div>
@@ -266,34 +280,34 @@
                         <div class="locations" id="location2">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Jeju_01.jpg" alt="제주01"></p>
+                                    <p><a href="#"><img src="images/Jeju_01.jpg" alt="제주01"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>코다</p>
                                     <p>또 다른 시작을 위한 에필로그</p>
-                                    <p>제주 / 제주시</p>	
+                                    <p><i class="xi-maker"></i>제주 / 제주시</p>	
                                     <p><span class="price">220,000원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Jeju_02.jpg" alt="제주02"></p>
+                                    <p><a href="#"><img src="images/Jeju_02.jpg" alt="제주02"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>한가로움</p>
                                     <p>한가로이 풍류를 누리다</p>
-                                    <p>제주 / 제주시</p>	
+                                    <p><i class="xi-maker"></i>제주 / 제주시</p>	
                                     <p><span class="price">400,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Jeju_03.jpg" alt="제주03"></p>
+                                    <p><a href="#"><img src="images/Jeju_03.jpg" alt="제주03"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>여주현</p>
                                     <p>나그네의 집</p>
-                                    <p>제주 / 제주시</p>	
+                                    <p><i class="xi-maker"></i>제주 / 제주시</p>	
                                     <p><span class="price">380,000원</span></p>	
                                 </div>
                             </div>
@@ -302,7 +316,7 @@
                         <div class="locations" id="location3">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Gangwon_01.jpg" alt="강원01"></p>
+                                    <p><a href="#"><img src="images/Gangwon_01.jpg" alt="강원01"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                     </div>
@@ -310,29 +324,29 @@
                                 <div class="info">
                                     <p>월화가옥</p>
                                     <p>달이 지나가는 길, 꽃이 머무는 곳</p>
-                                    <p>강원 / 강릉시</p>	
+                                    <p><i class="xi-maker"></i>강원 / 강릉시</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;280,000원&nbsp;&nbsp;</span> <span class="price">265,000원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Gangwon_02.jpg" alt="강원02"></p>
+                                    <p><a href="#"><img src="images/Gangwon_02.jpg" alt="강원02"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>느루 스테이</p>
                                     <p>나와 우리가 추억할 온전한 하룻밤</p>
-                                    <p>강원 / 강릉시</p>	
+                                    <p><i class="xi-maker"></i>강원 / 강릉시</p>	
                                     <p><span class="price">400,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Gangwon_03.jpg" alt="강원03"></p>
+                                    <p><a href="#"><img src="images/Gangwon_03.jpg" alt="강원03"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>스테이 히읗</p>
                                     <p>머무름이 휴식이 되는 곳</p>
-                                    <p>강원 / 강릉시</p>	
+                                    <p><i class="xi-maker"></i>강원 / 강릉시</p>	
                                     <p><span class="price">360,000원</span></p>	
                                 </div>
                             </div>
@@ -341,34 +355,34 @@
                         <div class="locations" id="location4">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Gyeongsang_01.jpg" alt="경상01"></p>
+                                    <p><a href="#"><img src="images/Gyeongsang_01.jpg" alt="경상01"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>고결문경</p>
                                     <p>문경의 지역 문화를 담아낸 곳</p>
-                                    <p>경상 / 문경시</p>	
+                                    <p><i class="xi-maker"></i>경상 / 문경시</p>	
                                     <p><span class="price">350,000원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Gyeongsang_02.jpg" alt="경상02"></p>
+                                    <p><a href="#"><img src="images/Gyeongsang_02.jpg" alt="경상02"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>율시헌</p>
                                     <p>추억이 간직되는 장소</p>
-                                    <p>경상 / 안동시</p>	
+                                    <p><i class="xi-maker"></i>경상 / 안동시</p>	
                                     <p><span class="price">380,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Gyeongsang_03.jpg" alt="경상03"></p>
+                                    <p><a href="#"><img src="images/Gyeongsang_03.jpg" alt="경상03"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>소여정</p>
                                     <p>정을 위한 작은 여유</p>
-                                    <p>경상 / 경주시</p>	
+                                    <p><i class="xi-maker"></i>경상 / 경주시</p>	
                                     <p><span class="price">340,000원</span></p>	
                                 </div>
                             </div>
@@ -377,29 +391,29 @@
                         <div class="locations" id="location5">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Seoul_01.jpg." alt="서울01"></p>
+                                    <p><a href="#"><img src="images/Seoul_01.jpg." alt="서울01"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>한옥에세이 서촌</p>
                                     <p>현대적인 사랑(舍廊)의 공간</p>
-                                    <p>서울 / 종로구</p>	
+                                    <p><i class="xi-maker"></i>서울 / 종로구</p>	
                                     <p><span class="price">380,000원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Seoul_02.jpg." alt="서울02"></p>
+                                    <p><a href="#"><img src="images/Seoul_02.jpg." alt="서울02"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>한옥 생활서가</p>
                                     <p>조용하고 평화로운 취향 서가</p>
-                                    <p>서울 / 은평구</p>	
+                                    <p><i class="xi-maker"></i>서울 / 은평구</p>	
                                     <p><span class="price">190,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Seoul_03.jpg." alt="서울03"></p>
+                                    <p><a href="#"><img src="images/Seoul_03.jpg." alt="서울03"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                     </div>
@@ -407,7 +421,7 @@
                                 <div class="info">
                                     <p>무월관</p>
                                     <p>달이 춤추는 곳</p>
-                                    <p>서울 / 종로구</p>	
+                                    <p><i class="xi-maker"></i>서울 / 종로구</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;400,000원&nbsp;&nbsp;</span> <span class="price">320,000원</span></p>	
                                 </div>
                             </div>
@@ -416,34 +430,34 @@
                         <div class="locations" id="location6">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Jeolla_01.jpg" alt="전라01"></p>
+                                    <p><a href="#"><img src="images/Jeolla_01.jpg" alt="전라01"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>하정사색</p>
                                     <p>내면의 이야기에 귀 기울이는 안온한 휴식</p>
-                                    <p>전라 / 남원시</p>	
+                                    <p><i class="xi-maker"></i>전라 / 남원시</p>	
                                     <p><span class="price">250,000원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Jeolla_02.jpg" alt="전라02"></p>
+                                    <p><a href="#"><img src="images/Jeolla_02.jpg" alt="전라02"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>무렵</p>
                                     <p>고즈넉한 그 무렵이 당신의 기억에 머물 때</p>
-                                    <p>전라 / 전주시</p>	
+                                    <p><i class="xi-maker"></i>전라 / 전주시</p>	
                                     <p><span class="price">255,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Jeolla_03.jpg" alt="전라03"></p>
+                                    <p><a href="#"><img src="images/Jeolla_03.jpg" alt="전라03"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>지선댁</p>
                                     <p>할머니 집에 온 듯 온정이 담긴 곳</p>
-                                    <p>전라 / 남원시</p>	
+                                    <p><i class="xi-maker"></i>전라 / 남원시</p>	
                                     <p><span class="price">290,000원</span></p>	
                                 </div>
                             </div>
@@ -452,18 +466,18 @@
                         <div class="locations" id="location7">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Gyeonggi_01.jpg" alt="경기01"></p>
+                                    <p><a href="#"><img src="images/Gyeonggi_01.jpg" alt="경기01"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>오후다섯시</p>
                                     <p>아스라하게 스러지는 해가 아름다운 공간</p>
-                                    <p>경기 / 양평군</p>	
+                                    <p><i class="xi-maker"></i>경기 / 양평군</p>	
                                     <p><span class="price">350,000원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Gyeonggi_02.jpg" alt="경기02"></p>
+                                    <p><a href="#"><img src="images/Gyeonggi_02.jpg" alt="경기02"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                     </div>
@@ -471,13 +485,13 @@
                                 <div class="info">
                                     <p>쪽샘집</p>
                                     <p>가평의 찬란함 아래 쪽빛이 가진 이야기</p>
-                                    <p>경기 / 가평군</p>	
+                                    <p><i class="xi-maker"></i>경기 / 가평군</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;350,000원&nbsp;&nbsp;</span> <span class="price">336,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Gyeonggi_03.jpg" alt="경기03"></p>
+                                    <p><a href="#"><img src="images/Gyeonggi_03.jpg" alt="경기03"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                     </div>
@@ -485,7 +499,7 @@
                                 <div class="info">
                                     <p>한옥에세이 누하</p>
                                     <p>현대적인 별서(別墅)의 공간</p>
-                                    <p>경기 / 수원시</p>	
+                                    <p><i class="xi-maker"></i>경기 / 수원시</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;490,000원&nbsp;&nbsp;</span> <span class="price">392,000원</span></p>
                                 </div>
                             </div>
@@ -494,7 +508,7 @@
                         <div class="locations" id="location8">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Chungcheong_01.jpg" alt="충청01"></p>
+                                    <p><a href="#"><img src="images/Chungcheong_01.jpg" alt="충청01"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                     </div>
@@ -502,13 +516,13 @@
                                 <div class="info">
                                     <p>홍시 아트 하우스</p>
                                     <p>제민천의 따스함과 문화 예술을 품은 공간</p>
-                                    <p>충청 / 공주시</p>	
+                                    <p><i class="xi-maker"></i>충청 / 공주시</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;250,000원&nbsp;&nbsp;</span> <span class="price">162,500원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Chungcheong_02.jpg" alt="충청02"></p>
+                                    <p><a href="#"><img src="images/Chungcheong_02.jpg" alt="충청02"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                         <p><span class="dis2">프로모션</span></p>
@@ -517,13 +531,13 @@
                                 <div class="info">
                                     <p>청유</p>
                                     <p>푸르게 놀던 어린 날의 우리</p>
-                                    <p>충청 / 논산시</p>	
+                                    <p><i class="xi-maker"></i>충청 / 논산시</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;400,000원&nbsp;&nbsp;</span> <span class="price">320,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Chungcheong_03.jpg" alt="충청03"></p>
+                                    <p><a href="#"><img src="images/Chungcheong_03.jpg" alt="충청03"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                     </div>
@@ -531,7 +545,7 @@
                                 <div class="info">
                                     <p>서와정</p>
                                     <p>평온한 쉼이 있는 곳</p>
-                                    <p>충청 / 부여군</p>	
+                                    <p><i class="xi-maker"></i>충청 / 부여군</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;270,000원&nbsp;&nbsp;</span> <span class="price">216,000원</span></p>	
                                 </div>
                             </div>
@@ -540,7 +554,7 @@
                         <div class="locations" id="location9">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Busan_01.jpg" alt="부산01"></p>
+                                    <p><a href="#"><img src="images/Busan_01.jpg" alt="부산01"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                     </div>
@@ -548,13 +562,13 @@
                                 <div class="info">
                                     <p>스테이 데이오프</p>
                                     <p>쉼이 필요한 날, 작은 한옥을 만나다.</p>
-                                    <p>부산 / 기장군</p>	
+                                    <p><i class="xi-maker"></i>부산 / 기장군</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;300,000원&nbsp;&nbsp;</span> <span class="price">240,000원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Busan_02.jpeg" alt="부산02"></p>
+                                    <p><a href="#"><img src="images/Busan_02.jpeg" alt="부산02"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                         <p><span class="dis2">프로모션</span></p>
@@ -563,13 +577,13 @@
                                 <div class="info">
                                     <p>스테이 조각밤</p>
                                     <p>조각이 모여 아름다운 문양의 기억이 되는 곳</p>
-                                    <p>부산 / 중구</p>	
+                                    <p><i class="xi-maker"></i>부산 / 중구</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;420,000원&nbsp;&nbsp;</span> <span class="price">336,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Busan_03.jpeg" alt="부산03"></p>
+                                    <p><a href="#"><img src="images/Busan_03.jpeg" alt="부산03"></a></p>
                                     <div class="discount">
                                         <p><span class="dis2">프로모션</span></p>
                                     </div>
@@ -577,7 +591,7 @@
                                 <div class="info">
                                     <p>스테이 물결</p>
                                     <p>물결처럼 잔잔한 시간</p>
-                                    <p>부산 / 해운대구</p>	
+                                    <p><i class="xi-maker"></i>부산 / 해운대구</p>	
                                     <p><span class="price">300,000원</span></p>	
                                 </div>
                             </div>
@@ -586,18 +600,18 @@
                         <div class="locations" id="location10">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Incheon_01.jpg" alt="인천01"></p>
+                                    <p><a href="#"><img src="images/Incheon_01.jpg" alt="인천01"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>초점</p>
                                     <p>온전히 나에게 초점을 맞추다</p>
-                                    <p>인천 / 미추홀구</p>	
+                                    <p><i class="xi-maker"></i>인천 / 미추홀구</p>	
                                     <p><span class="price">330,000원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Incheon_02.jpg" alt="인천02"></p>
+                                    <p><a href="#"><img src="images/Incheon_02.jpg" alt="인천02"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                     </div>
@@ -605,18 +619,18 @@
                                 <div class="info">
                                     <p>스테이한량</p>
                                     <p>일상에 지친 당신을 위한 하룻밤 한량 놀이</p>
-                                    <p>인천 / 연수구</p>	
+                                    <p><i class="xi-maker"></i>인천 / 연수구</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;350,000원&nbsp;&nbsp;</span> <span class="price">245,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Incheon_03.jpg" alt="인천03"></p>
+                                    <p><a href="#"><img src="images/Incheon_03.jpg" alt="인천03"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>안길사가</p>
                                     <p>안국동 선비의 집</p>
-                                    <p>인천 / 동구</p>	
+                                    <p><i class="xi-maker"></i>인천 / 동구</p>	
                                     <p><span class="price">430,000원</span></p>	
                                 </div>
                             </div>
@@ -625,7 +639,7 @@
                         <div class="locations" id="location11">
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Gwangju_01.jpg" alt="광주01"></p>
+                                    <p><a href="#"><img src="images/Gwangju_01.jpg" alt="광주01"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                         <p><span class="dis2">프로모션</span></p>
@@ -634,32 +648,32 @@
                                 <div class="info">
                                     <p>스테이 누누</p>
                                     <p>평화의 피난처</p>
-                                    <p>광주/ 동구</p>	
+                                    <p><i class="xi-maker"></i>광주/ 동구</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;350,000원&nbsp;&nbsp;</span> <span class="price">280,000원</span></p>	
                                 </div>
                             </div>
                             <div class="room">
                                 <div class="roomimg">
-                                    <p><img src="images/Gwangju_02.jpg" alt="광주02"></p>
+                                    <p><a href="#"><img src="images/Gwangju_02.jpg" alt="광주02"></a></p>
                                     <div class="discount">
                                         <p><span class="dis1">마감할인</span></p>
                                     </div>
                                 </div>
                                 <div class="info">
                                     <p>식목일</p>
-                                    <p>누군가의 일상이 모여 여행이 되는</p>
-                                    <p>광주 / 북구</p>	
+                                    <p>낡은 것들이 일깨우는 시간의 의미</p>
+                                    <p><i class="xi-maker"></i>광주 / 북구</p>	
                                     <p><span class="ogprice">&nbsp;&nbsp;260,000원&nbsp;&nbsp;</span> <span class="price">256,000원</span></p>	
                                 </div>
                             </div>
-                            <div class="room">
+                            <div class="room skiproom">
                                 <div class="roomimg">
-                                    <p><img src="images/Gwangju_03.jpg" alt="광주03"></p>
+                                    <p><a href="#"><img src="images/Gwangju_03.jpg" alt="광주03"></a></p>
                                 </div>
                                 <div class="info">
                                     <p>임영고택</p>
                                     <p>임영을 지키는 오래된 저택</p>
-                                    <p>광주 / 광산구</p>	
+                                    <p><i class="xi-maker"></i>광주 / 광산구</p>	
                                     <p><span class="price">350,000원</span></p>	
                                 </div>
                             </div>
@@ -709,35 +723,35 @@
                 <div class="swipers mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="images/magazine_01.jpg">
+                            <a href="#"><img src="images/magazine_01.jpg"></a>
                             <div class="caption">
                                 <h6><i class="xi-minus-thin"></i> &nbsp;&nbsp; SOYEOJEONG &nbsp;&nbsp; <i class="xi-minus-thin"></i></h6>
                                 <p>따스히 느껴지는 진심의 누적</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/magazine_02.jpg">
+                            <a href="#"><img src="images/magazine_02.jpg"></a>
                             <div class="caption">
                                 <h6><i class="xi-minus-thin"></i> &nbsp;&nbsp; NUWA &nbsp;&nbsp; <i class="xi-minus-thin"></i></h6>
                                 <p>서울 속 일상의 풍류에 느슨하게 잠기다</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/magazine_03.jpg">
+                            <a href="#"><img src="images/magazine_03.jpg"></a>
                             <div class="caption">
                                 <h6><i class="xi-minus-thin"></i> &nbsp;&nbsp; HANOK ESSAY SEOCHON &nbsp;&nbsp; <i class="xi-minus-thin"></i></h6>
                                 <p>스스로를 위한 환대의 공간</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/magazine_04.jpg">
+                            <a href="#"><img src="images/magazine_04.jpg"></a>
                             <div class="caption">
                                 <h6><i class="xi-minus-thin"></i> &nbsp;&nbsp; WOLWHA HOUSE &nbsp;&nbsp; <i class="xi-minus-thin"></i></h6>
                                 <p>달빛 아래 나를 꾸미는 여행</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/magazine_05.jpg">
+                            <a href="#"><img src="images/magazine_05.jpg"></a>
                             <div class="caption">
                                 <h6><i class="xi-minus-thin"></i> &nbsp;&nbsp; GOHYEON &nbsp;&nbsp; <i class="xi-minus-thin"></i></h6>
                                 <p>시간의 경계에서, 고현한 쉼에 이르다</p>
@@ -745,21 +759,21 @@
                             
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/magazine_06.jpg">
+                            <a href="#"><img src="images/magazine_06.jpg"></a>
                             <div class="caption">
                                 <h6><i class="xi-minus-thin"></i> &nbsp;&nbsp; THEORIA &nbsp;&nbsp; <i class="xi-minus-thin"></i></h6>
                                 <p>내 마음의 물결을 따라 머무는 공간</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/magazine_07.jpg">
+                            <a href="#"><img src="images/magazine_07.jpg"></a>
                             <div class="caption">
                                 <h6><i class="xi-minus-thin"></i> &nbsp;&nbsp; ANGILSAGA &nbsp;&nbsp; <i class="xi-minus-thin"></i></h6>
                                 <p>머무는 이를 귀히 여기는 선비의 집</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/magazine_08.jpg">
+                            <a href="#"><img src="images/magazine_08.jpg"></a>
                             <div class="caption">
                                 <h6><i class="xi-minus-thin"></i> &nbsp;&nbsp; MASIL &nbsp;&nbsp; <i class="xi-minus-thin"></i></h6>
                                 <p>제주 마을로의 마실</p>
@@ -808,10 +822,12 @@
                     <ul>
                         <li class="foottitle">Guide</li>
                         <li>&nbsp;</li>
-                        <li><a href="#">이용약관</a></li>
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">이용안내</a></li>
-                        <li><a href="#">자주묻는질문</a></li>
+                        <div>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                        </div>
                     </ul>
                 </div>
                 <div id="thirdfoot">

@@ -94,3 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 var mobilemenubtn = new EzenAddClass(".openmenu");
+
+function showCountry(target) {
+	var inp = document.querySelector(target);
+	inp.checked = true;
+  }
