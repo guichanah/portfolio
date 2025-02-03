@@ -328,6 +328,9 @@ main .scroll.scrolled {
   gap: 5px;
   white-space: nowrap;
 }
+#booking .date-picker {
+  cursor: pointer;
+}
 #booking .label {
   font-size: clamp(16px, 1vw, 20px);
   font-weight: bold;
