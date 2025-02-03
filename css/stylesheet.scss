@@ -489,7 +489,9 @@ footer{
     #pager .prev p img,
     #pager .next p img{display: none;}
     }
-    header .inner{padding: 0 20px;}
+    header .inner{padding: 3px 10px;
+        h1 img{width: 15vw;}
+    }
     header #gnb{display: none;}
     header #rightmenu{display: none;}
     #mobilemenu{display: block;
@@ -497,7 +499,7 @@ footer{
     }
 
 
-    header {background: #fff; color: #333;
+    header {background: #fff; color: #333; height: 60px; padding: 12px;
         .inner h1{
             #blacklogo{display: block;}
             #whitelogo{display: none;}

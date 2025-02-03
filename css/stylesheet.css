@@ -897,7 +897,10 @@ footer #copyright {
     display: none;
   }
   header .inner {
-    padding: 0 20px;
+    padding: 3px 10px;
+  }
+  header .inner h1 img {
+    width: 15vw;
   }
   header #gnb {
     display: none;
@@ -916,6 +919,8 @@ footer #copyright {
   header {
     background: #fff;
     color: #333;
+    height: 60px;
+    padding: 12px;
   }
   header .inner h1 #blacklogo {
     display: block;
