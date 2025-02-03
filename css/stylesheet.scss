@@ -459,12 +459,13 @@ footer{
 @media all and (max-width:1024px){
     .inner{padding: 0 60px;}
     .container{padding: 0 0 0 60px;}
+    #mainvisual{height: 100%;}
     #mainvisual .intro{position: absolute; left: 60px; bottom: 80px; color: #fff;}
     header .inner{padding: 0 60px;}
     #promotion{
         #bannerp{padding-top: 2.0vw;}
     }
-    #booking{height: 100px; margin-bottom: 50px;}
+    #booking{height: 100px; margin-bottom: 50px; margin-top: -5px; z-index: 999;}
     #reservation.inner{
         padding: 0 60px;
         .search-container {

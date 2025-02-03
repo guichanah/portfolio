@@ -851,6 +851,9 @@ footer #copyright {
   .container {
     padding: 0 0 0 60px;
   }
+  #mainvisual {
+    height: 100%;
+  }
   #mainvisual .intro {
     position: absolute;
     left: 60px;
@@ -866,6 +869,8 @@ footer #copyright {
   #booking {
     height: 100px;
     margin-bottom: 50px;
+    margin-top: -5px;
+    z-index: 999;
   }
   #reservation.inner {
     padding: 0 60px;
