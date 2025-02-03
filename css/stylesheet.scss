@@ -34,6 +34,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FAF8F3;
+    box-sizing: border-box;
     
 }
 header {
@@ -105,12 +106,12 @@ nav ul li a:hover{color: #808080;}
 //메인
 
 //메인스크롤 플러그인
-main{width: 100vw;
+main{width: 100%;
     .scroll{opacity:0; transition:all .9s; transform: translateY(70px);}
     .scroll.scrolled{opacity:1; transition:all .9s; transform: translateY(0px);}
 }
 
-#mainvisual{width: 100vw;
+#mainvisual{width: 100%;
     .sharp{margin-left: 20px;}
     position: relative;
     width: 100%; height: 100vh;
@@ -386,7 +387,7 @@ p.more{float: right; width: 80px; height: 32px; line-height: 32px; margin-left: 
 
 
 
-#ads{width: 100vw; height: 26.1vw; max-height: 500px;
+#ads{width: 100%; height: 26.1vw; max-height: 500px;
     background:url("../images/banner_02.png") no-repeat fixed; background-size: cover;
     background-position: center;
     text-align: center;
