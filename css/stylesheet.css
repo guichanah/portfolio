@@ -988,21 +988,23 @@ footer #copyright {
   #booking .label {
     white-space: wrap;
   }
+  #booking .label.firstlabel {
+    padding-right: 19px;
+  }
   #booking .search-box {
     text-align: center;
     align-items: center;
+    padding-left: 10px;
   }
   #booking .search-box .date-picker input {
     padding-left: 35px;
-  }
-  #booking select {
-    padding-left: 20px;
   }
   #booking select option {
     text-align: center;
   }
   #booking select option span {
-    width: 170px;
+    width: 100%;
+    height: 100%;
   }
   #rooms {
     height: 400px;
