@@ -1074,11 +1074,11 @@ footer #copyright {
   #travel {
     margin-bottom: 100px;
     width: 100%;
-    height: 420px;
+    height: 510px;
     box-sizing: border-box;
   }
   #travel #travellist {
-    height: 200px;
+    height: 250px;
     flex-wrap: wrap;
     box-sizing: border-box;
   }
