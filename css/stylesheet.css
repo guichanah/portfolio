@@ -1001,6 +1001,10 @@ footer #copyright {
     margin-bottom: -15px;
     width: 100px;
   }
+  #roomtabs .more {
+    margin-top: -10px;
+    margin-bottom: 8px;
+  }
   #roomtabs label {
     display: none !important;
   }
@@ -1018,6 +1022,21 @@ footer #copyright {
   .locations .room .roomimg {
     width: 100%;
     height: 100%;
+  }
+  .locations .room .roomimg .discount {
+    top: 5px;
+    left: 5px;
+    width: 70px;
+    height: 30px;
+  }
+  .locations .room .roomimg .discount p {
+    width: 50%;
+    height: 100%;
+  }
+  .locations .room .roomimg .discount p span {
+    width: 40px;
+    height: 30px;
+    border-radius: 2px;
   }
   .locations .room .info p:nth-child(2) {
     white-space: wrap;
