@@ -16,11 +16,11 @@ transition: all 0.5s;
 */
 
 #mobilegnb{width: 100%; height: 851%; background: #333; color: #fff;
-    visibility: hidden; opacity: 0; z-index: 999; position:absolute; top: 40.59px; left: 0;
+    visibility: hidden; opacity: 0; z-index: 999; position:absolute; top: 60px; left: 0;
     transition: all 0.5s;
     ul{width: 100%; display: flex; flex-direction: column; justify-content: space-evenly;
         li{width: 100%; height: 20%; border-bottom: 1px solid #fff; margin: 0;
-            a{line-height: 66.75px; font-size: 24px;}
+            a{line-height: 102px; font-size: 24px;}
         }
         li:last-child{border-bottom: none;}
     }
@@ -55,7 +55,7 @@ header {
     &.scrolled{background: #fff; color: #333;
         h1{
             #whitelogo{display: none;}
-            #blacklogo{display: block; }
+            #blacklogo{display: block;}
         }
         #rightmenu{
             ul li a{color: #000;}
@@ -521,13 +521,13 @@ footer{
             .page{margin:0 0px;}
             }
 
-        .intro{position: absolute; left: 20px; top: 70px; color: #fff;
+        .intro{position: absolute; left: 20px; top: 90px; color: #fff;
             h2{line-height: 1.3; font-size: clamp(30px, 2.5vw, 48px); white-space: nowrap;}
             h4{margin-top: 10px; line-height: 1.4; font-size: clamp(18px, 1.5vw, 25px); white-space: nowrap; font-weight: 500;}
             p:nth-child(3){display: none;
             }
             p:nth-child(4){
-                margin-top: 270px;
+                margin-top: 250px;
             }
         }
     }
