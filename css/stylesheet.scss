@@ -469,8 +469,8 @@ footer{
     header .inner{padding: 0 60px;}
     #promotion{
         #bannerp{padding-top: 7px;
-            h3{font-size: 24px;}
-            p{font-size: 18px;
+            h3{font-size: 24px; margin: 12px 0 15px;}
+            p{font-size: 18px; 
                 span{font-size: 24px;}
             }
         }
@@ -488,27 +488,7 @@ footer{
             padding: 10px 30px;
         }
     }
-    footer{
-        #footerlogo{
-            p img{width: 15vw;}
-        }
-        hr{display: none;}
-        #footercontent{flex-wrap: wrap; flex-direction: column; height: 210px; font-size: 14px;
-            #firstfoot{width: 60%;
-                #qus{width: 50%;}
-            }
-            #secondfoot{
-                ul div{display: flex; flex-direction: row; gap: 10px;}
-            }
-            
-            #forthfoot{
-                ul{display: flex; justify-content: space-between;}
-            }
-        }
-        #copyright{margin-top: 20px; display: flex; gap: 85px; font-size: 12px;}
-    }
 }
-
 
 
 
