@@ -853,6 +853,9 @@ footer #copyright {
   .container {
     padding: 0 0 0 60px;
   }
+  #mainvisual {
+    height: 700px;
+  }
   #mainvisual .intro {
     position: absolute;
     left: 60px;
