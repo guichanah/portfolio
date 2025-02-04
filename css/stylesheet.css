@@ -506,7 +506,6 @@ main .scroll.scrolled {
   margin-top: 8px;
   font-weight: 600;
   font-size: clamp(16px, 1.05vw, 21px);
-  white-space: nowrap;
   color: #2B2921;
 }
 .locations .room .info p:nth-child(3) {
@@ -1067,6 +1066,9 @@ footer #copyright {
   .locations .room .info p:nth-child(2) {
     white-space: wrap;
     word-break: keep-all;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .locations .room.skiproom {
     display: none;
