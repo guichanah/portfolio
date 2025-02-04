@@ -895,6 +895,35 @@ footer #copyright {
   #reservation.inner .search-btn {
     padding: 10px 50px;
   }
+  footer hr {
+    display: none;
+  }
+  footer #footercontent {
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 200px;
+    font-size: 14px;
+  }
+  footer #footercontent #firstfoot {
+    width: 60%;
+  }
+  footer #footercontent #firstfoot #qus {
+    width: 50%;
+  }
+  footer #footercontent #secondfoot ul div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  footer #footercontent #forthfoot ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer #copyright {
+    margin-top: 20px;
+    display: flex;
+    gap: 145px;
+  }
 }
 @media all and (max-width: 430px) {
   .inner {

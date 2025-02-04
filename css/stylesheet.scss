@@ -486,6 +486,21 @@ footer{
             padding: 10px 50px;
         }
     }
+    footer{
+        hr{display: none;}
+        #footercontent{flex-wrap: wrap; flex-direction: column; height: 200px; font-size: 14px;
+            #firstfoot{width: 60%;
+                #qus{width: 50%;}
+            }
+            #secondfoot{
+                ul div{display: flex; flex-direction: row; gap: 10px;}
+            }
+            #forthfoot{
+                ul{display: flex; justify-content: space-between;}
+            }
+        }
+        #copyright{margin-top: 20px; display: flex; gap: 145px;}
+    }
 }
 
 
