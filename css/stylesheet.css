@@ -925,7 +925,8 @@ footer #copyright {
   footer #copyright {
     margin-top: 20px;
     display: flex;
-    gap: 145px;
+    gap: 85px;
+    font-size: 12px;
   }
 }
 @media all and (max-width: 430px) {
