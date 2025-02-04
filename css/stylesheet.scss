@@ -122,7 +122,7 @@ main{width: 100%;
             }
         }//스와이퍼 웨퍼 끝
     #pager{display: flex;
-        position: absolute; right: 150px; bottom: 80px; z-index: 100;
+        position: absolute; right: 220px; bottom: 80px; z-index: 100;
         .page{color: #fff; margin:0 40px; width: 40px; text-align: center;}
         .prev,.next{cursor: pointer;}
         }
@@ -462,7 +462,9 @@ footer{
 @media all and (max-width:1024px){
     .inner{padding: 0 60px;}
     .container{padding: 0 0 0 60px;}
-    #mainvisual{height: 700px;}
+    #mainvisual{height: 700px;
+        .swiper #pager{position: absolute; right: 70px; bottom: 80px;}
+    }
     #mainvisual .intro{position: absolute; left: 60px; bottom: 80px; color: #fff;}
     header .inner{padding: 0 60px;}
     #promotion{

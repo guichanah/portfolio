@@ -232,7 +232,7 @@ main .scroll.scrolled {
 #mainvisual .swiper #pager {
   display: flex;
   position: absolute;
-  right: 150px;
+  right: 220px;
   bottom: 80px;
   z-index: 100;
 }
@@ -855,6 +855,11 @@ footer #copyright {
   }
   #mainvisual {
     height: 700px;
+  }
+  #mainvisual .swiper #pager {
+    position: absolute;
+    right: 70px;
+    bottom: 80px;
   }
   #mainvisual .intro {
     position: absolute;
