@@ -866,7 +866,16 @@ footer #copyright {
     padding: 0 60px;
   }
   #promotion #bannerp {
-    padding-top: 2vw;
+    padding-top: 7px;
+  }
+  #promotion #bannerp h3 {
+    font-size: 24px;
+  }
+  #promotion #bannerp p {
+    font-size: 18px;
+  }
+  #promotion #bannerp p span {
+    font-size: 24px;
   }
   #booking {
     height: 100px;
