@@ -483,18 +483,22 @@ footer{
             padding: 20px 0;
         }
         .search-btn {
-            padding: 10px 50px;
+            padding: 10px 30px;
         }
     }
     footer{
+        #footerlogo{
+            p img{width: 15vw;}
+        }
         hr{display: none;}
-        #footercontent{flex-wrap: wrap; flex-direction: column; height: 200px; font-size: 14px;
+        #footercontent{flex-wrap: wrap; flex-direction: column; height: 210px; font-size: 14px;
             #firstfoot{width: 60%;
                 #qus{width: 50%;}
             }
             #secondfoot{
                 ul div{display: flex; flex-direction: row; gap: 10px;}
             }
+            
             #forthfoot{
                 ul{display: flex; justify-content: space-between;}
             }

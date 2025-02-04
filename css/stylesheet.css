@@ -893,7 +893,10 @@ footer #copyright {
     padding: 20px 0;
   }
   #reservation.inner .search-btn {
-    padding: 10px 50px;
+    padding: 10px 30px;
+  }
+  footer #footerlogo p img {
+    width: 15vw;
   }
   footer hr {
     display: none;
@@ -901,7 +904,7 @@ footer #copyright {
   footer #footercontent {
     flex-wrap: wrap;
     flex-direction: column;
-    height: 200px;
+    height: 210px;
     font-size: 14px;
   }
   footer #footercontent #firstfoot {
