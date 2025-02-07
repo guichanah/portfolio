@@ -33,6 +33,11 @@ const swiper = new Swiper('#mainvisual .swiper', {
 var swipers = new Swiper("#magazine .mySwiper", {
   slidesPerView: "auto",
   spaceBetween: 12,
+  loop: true,
+  speed: 800,
+  autoplay:{
+    delay: 2500,
+  }
 });
 
 
