@@ -507,7 +507,7 @@ footer{
             }
             #forthfoot>ul{display: flex; justify-content: space-evenly; gap: 0px;}
         }
-        #footercontent>div{margin-bottom: 10px; width: 50%;}
+        #footercontent>div{margin-bottom: 10px; width: 80%;}
         hr{display: none;}
         #copyright{ width: 100%; white-space: wrap; margin-top: 10px;
             p{font-size: 14px;}
@@ -524,7 +524,7 @@ footer{
     
     .inner{padding: 0 11.5vw;}
     .search-container{display: flex; flex-direction: column;}
-    .container{padding: 0 20px 0 20px;}
+    .container{padding: 0 0px 0 11.5vw;}
     #mainvisual{
         height: 520px;
     #pager .prev p img,
@@ -635,6 +635,7 @@ footer{
 
     #promotion{
         #bannerp{
+            padding-top: 20px;
             h3{font-size: 16px; margin: 10px 0 12px;}
             p{font-size: 12px;
                 span{font-size: 16px}

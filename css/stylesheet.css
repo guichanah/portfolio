@@ -958,7 +958,7 @@ footer #copyright {
   }
   footer #footercontent > div {
     margin-bottom: 10px;
-    width: 50%;
+    width: 80%;
   }
   footer hr {
     display: none;
@@ -981,7 +981,7 @@ footer #copyright {
     flex-direction: column;
   }
   .container {
-    padding: 0 20px 0 20px;
+    padding: 0 0px 0 11.5vw;
   }
   #mainvisual {
     height: 520px;
@@ -1186,6 +1186,9 @@ footer #copyright {
     width: 49%;
     margin-bottom: 8px;
     box-sizing: border-box;
+  }
+  #promotion #bannerp {
+    padding-top: 20px;
   }
   #promotion #bannerp h3 {
     font-size: 16px;
