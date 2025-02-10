@@ -823,6 +823,9 @@ footer .phone {
   font-weight: bold;
   margin: -6px 0 6px;
 }
+footer .hidden-content {
+  display: block;
+}
 footer #footerlogo {
   margin-bottom: 30px;
   margin-top: 10px;
