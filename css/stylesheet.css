@@ -319,7 +319,7 @@ main .scroll.scrolled {
 }
 #booking .bookingflex {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -1088,6 +1088,16 @@ footer #copyright {
   }
   #booking .search-box .date-picker input {
     padding-left: 35px;
+  }
+  #booking .bookingflex {
+    justify-content: center;
+  }
+  #booking .bookingflex.bookingdate {
+    flex-direction: column;
+    align-items: center;
+  }
+  #booking .bookingflex.bookingdate .search-btn {
+    margin-top: 10px;
   }
   #booking select option {
     text-align: center;
