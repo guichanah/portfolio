@@ -424,7 +424,7 @@ p.more{float: right; width: 80px; height: 32px; line-height: 32px; margin-left: 
 
 
 footer{
-    #mobileinner{display: none;}
+    #footerbtn{display: none;}
     hr{margin: 25px 0;}
     .foottitle{font-weight: bold;}
     .phone{font-size: clamp(24px, 1.6vw, 30px); font-weight: bold; margin: -6px 0 6px;}
@@ -664,7 +664,7 @@ footer{
         &.expanded {
             height: 550px;
         }
-    
+        
         #footerlogo {
             display: flex;
             margin-bottom: 15px;

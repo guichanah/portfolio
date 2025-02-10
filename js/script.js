@@ -115,10 +115,10 @@ document.getElementById("footerbtn").addEventListener("click", function () {
   if (footer.classList.contains("expanded")) {
       footer.classList.remove("expanded");
       hiddenContents.forEach((content) => (content.style.display = "none"));
-      this.textContent = "펼치기 ▼";
+      this.innerHTML = "펼치기 <i class='xi-caret-down-circle-o'></i>";
   } else {
       footer.classList.add("expanded");
       hiddenContents.forEach((content) => (content.style.display = "block"));
-      this.textContent = "접기 ▲";
+      this.innerHTML = "접기  <i class='xi-caret-up-circle-o'></i>";
   }
 });
