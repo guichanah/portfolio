@@ -127,46 +127,49 @@
             <div id="reservation" class="inner">
                 <div class="search-container">
                     <!-- 여행지 선택 (select 태그 사용) -->
-                    <div class="search-box">
-                        <div class="label firstlabel">
-                            <i class="xi-maker"></i>여행지
+                    <div class="bookingflex">
+                        <div class="search-box">
+                            <div class="label firstlabel">
+                                <i class="xi-maker"></i>여행지
+                            </div>
+                            <select>
+                                <option value="전체"><span>전체</span></option>
+                                <option value="제주"><span>제주</span></option>
+                                <option value="강원"><span>강원</span></option>
+                                <option value="경상"><span>경상</span></option>
+                                <option value="서울"><span>서울</span></option>
+                                <option value="전라"><span>전라</span></option>
+                                <option value="경기"><span>경기</span></option>
+                                <option value="충청"><span>충청</span></option>
+                                <option value="부산"><span>부산</span></option>
+                                <option value="인천"><span>인천</span></option>
+                                <option value="광주"><span>광주</span></option>
+                            </select>
                         </div>
-                        <select>
-                            <option value="전체"><span>전체</span></option>
-                            <option value="제주"><span>제주</span></option>
-                            <option value="강원"><span>강원</span></option>
-                            <option value="경상"><span>경상</span></option>
-                            <option value="서울"><span>서울</span></option>
-                            <option value="전라"><span>전라</span></option>
-                            <option value="경기"><span>경기</span></option>
-                            <option value="충청"><span>충청</span></option>
-                            <option value="부산"><span>부산</span></option>
-                            <option value="인천"><span>인천</span></option>
-                            <option value="광주"><span>광주</span></option>
-                        </select>
-                    </div>
-                    <!-- 인원 선택 -->
-                    <div class="search-box">
-                        <div class="label"><i class="xi-user-o"></i> 인원</div>
-                        <div class="guest-counter">
-                            <button>-</button>
-                            <span>2</span>
-                            <button>+</button>
+                        <!-- 인원 선택 -->
+                        <div class="search-box">
+                            <div class="label"><i class="xi-user-o"></i> 인원</div>
+                            <div class="guest-counter">
+                                <button>-</button>
+                                <span>2</span>
+                                <button>+</button>
+                            </div>
                         </div>
                     </div>
                     <!-- 체크인/체크아웃 -->
-                    <div class="search-box">
-                        <div class="label">
-                            <i class="xi-calendar"></i> CHECK IN / CHECK OUT
+                    <div class="bookingflex">
+                        <div class="search-box">
+                            <div class="label">
+                                <i class="xi-calendar"></i> CHECK IN / CHECK OUT
+                            </div>
+                            <div class="date-picker">
+                                <input type="date" id="check-in">
+                                <input type="date" id="check-out">
+                            </div>
                         </div>
-                        <div class="date-picker">
-                            <input type="date" id="check-in">
-                            <input type="date" id="check-out">
-                        </div>
+                        <!-- 검색 버튼 -->
+                        <button class="search-btn">검색 <i class="fas fa-search"></i></button>
                     </div>
-            
-                    <!-- 검색 버튼 -->
-                    <button class="search-btn">검색 <i class="fas fa-search"></i></button>
                 </div>
             </div>
         </section>
