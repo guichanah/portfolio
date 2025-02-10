@@ -108,6 +108,8 @@ function showCountry(target) {
 
 
 //풋터영역 버튼
+var abcd = false;
+
 document.getElementById("footerbtn").addEventListener("click", function () {
   let footer = document.querySelector("footer");
   let hiddenContents = document.querySelectorAll(".hidden-content");
@@ -116,15 +118,21 @@ document.getElementById("footerbtn").addEventListener("click", function () {
       footer.classList.remove("expanded");
       hiddenContents.forEach((content) => (content.style.display = "none"));
       this.innerHTML = "펼치기 <i class='xi-caret-down-circle-o'></i>";
+      abcd = false;
   } else {
       footer.classList.add("expanded");
       hiddenContents.forEach((content) => (content.style.display = "block"));
       this.innerHTML = "접기  <i class='xi-caret-up-circle-o'></i>";
+      abcd = true;
   }
 });
+
+
 
 window.addEventListener("resize", function(){
   if(window.innerWidth > 906){
     document.querySelectorAll(".hidden-content").forEach((content) => (content.style.display = "block"));
+  }else if(!abcd){
+    document.querySelectorAll(".hidden-content").forEach((content) => (content.style.display = "none"));
   }
 });
