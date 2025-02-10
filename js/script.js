@@ -104,3 +104,21 @@ function showCountry(target) {
 	var inp = document.querySelector(target);
 	inp.checked = true;
   }
+
+
+
+//풋터영역 버튼
+document.getElementById("footerbtn").addEventListener("click", function () {
+  let footer = document.querySelector("footer");
+  let hiddenContents = document.querySelectorAll(".hidden-content");
+
+  if (footer.classList.contains("expanded")) {
+      footer.classList.remove("expanded");
+      hiddenContents.forEach((content) => (content.style.display = "none"));
+      this.textContent = "펼치기 ▼";
+  } else {
+      footer.classList.add("expanded");
+      hiddenContents.forEach((content) => (content.style.display = "block"));
+      this.textContent = "접기 ▲";
+  }
+});

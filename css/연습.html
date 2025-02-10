@@ -3,125 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>검색 UI</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>HANULCHAE Footer</title>
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
         }
-
-        .search-container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+        .footer {
+            width: 100%;
+            background: #222;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 250px;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+        }
+        .footer.expanded {
+            height: 550px;
+        }
+        .footer-content {
             padding: 20px;
         }
-
-        .search-box {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .label {
+        .toggle-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
             font-size: 14px;
-            font-weight: bold;
-            color: #814c20; /* 브라운 계열 */
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .dropdown {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 180px;
-            border-bottom: 1px solid black;
-            cursor: pointer;
-            padding-bottom: 3px;
-        }
-
-        .guest-counter {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .guest-counter button {
-            width: 25px;
-            height: 25px;
-            border: 1px solid black;
-            background: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .guest-counter span {
-            font-size: 16px;
-            width: 20px;
-            text-align: center;
-        }
-
-        .search-btn {
-            padding: 10px 20px;
-            border: 1px solid #814c20;
-            background: none;
-            cursor: pointer;
-            font-size: 16px;
-            color: #814c20;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .search-btn:hover {
-            background: #814c20;
-            color: white;
         }
     </style>
 </head>
 <body>
-
-    <div class="search-container">
-        <!-- 여행지 선택 -->
-        <div class="search-box">
-            <div class="label">
-                <i class="fas fa-map-marker-alt"></i> 여행지
-            </div>
-            <div class="dropdown">
-                전체
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
-
-        <!-- 체크인/체크아웃 -->
-        <div class="search-box">
-            <div class="label">
-                <i class="fas fa-calendar-alt"></i> CHECK IN / CHECK OUT
-            </div>
-            <div class="dropdown">
-                01.10 금 - 01.11 토 (1박)
-                <i class="fas fa-chevron-down"></i>
+    <div class="footer" id="footer">
+        <button class="toggle-button" id="toggleButton">펼치기</button>
+        <div class="footer-content">
+            <h2>HANULCHAE</h2>
+            <p>대표자: 김정애</p>
+            <p>주소: 전라북도 전주시 덕진구 백제대로 572 4층</p>
+            <p>사업자번호: 418-90-44549</p>
+            <p>통신판매업번호: 제 2010-전주덕진-121호</p>
+            <p>관광사업자등록: 일반여행업 2018-000049호(전주시청)</p>
+            <div class="expanded-content" style="display: none;">
+                <h3>Guide</h3>
+                <p>이용약관 | 개인정보처리방침 | 이용안내 | 자주묻는 질문</p>
+                <h3>Customer Center</h3>
+                <p>063)276-2381</p>
+                <p>평일 09:00-18:00 점심 12:00 - 13:00</p>
+                <p>(토,일 공휴일 휴무)</p>
+                <h3>SNS</h3>
+                <p>인스타그램 | 페이스북 | 유튜브 | 핀터레스트</p>
             </div>
         </div>
-
-        <!-- 인원 선택 -->
-        <div class="search-box">
-            <div class="label">👤 인원</div>
-            <div class="guest-counter">
-                <button>-</button>
-                <span>2</span>
-                <button>+</button>
-            </div>
-        </div>
-
-        <!-- 검색 버튼 -->
-        <button class="search-btn">검색 <i class="fas fa-search"></i></button>
     </div>
 
+    <script>
+        document.getElementById("toggleButton").addEventListener("click", function() {
+            var footer = document.getElementById("footer");
+            var expandedContent = document.querySelector(".expanded-content");
+            if (footer.classList.contains("expanded")) {
+                footer.classList.remove("expanded");
+                expandedContent.style.display = "none";
+                this.textContent = "펼치기";
+            } else {
+                footer.classList.add("expanded");
+                expandedContent.style.display = "block";
+                this.textContent = "접기";
+            }
+        });
+    </script>
 </body>
 </html>
