@@ -122,3 +122,9 @@ document.getElementById("footerbtn").addEventListener("click", function () {
       this.innerHTML = "접기  <i class='xi-caret-up-circle-o'></i>";
   }
 });
+
+window.addEventListener("resize", function(){
+  if(window.innerWidth > 906){
+    document.querySelectorAll(".hidden-content").forEach((content) => (content.style.display = "block"));
+  }
+});
