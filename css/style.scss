@@ -244,9 +244,12 @@ section {
 }
 
 @media all and (max-width:790px){
-    #about{
-        .inner{flex-direction: column; justify-content: center; align-items: center; text-align: center;}
-        padding: 1vw 10vw;
-
+    html,body{overflow:auto;}
+    #main{height: 50vh;}
+    #about{height: 120vh;}
+    #contact{height: 50vh;}
+    #about .inner{display: flex; flex-direction: column; text-align: center; align-items: center;
+        padding: 0 10vw;
     }
+    .indicator-container{display: none;}
 }

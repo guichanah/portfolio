@@ -432,13 +432,26 @@ section {
   }
 }
 @media all and (max-width: 790px) {
+  html, body {
+    overflow: auto;
+  }
+  #main {
+    height: 50vh;
+  }
   #about {
-    padding: 1vw 10vw;
+    height: 120vh;
+  }
+  #contact {
+    height: 50vh;
   }
   #about .inner {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    align-items: center;
+    padding: 0 10vw;
+  }
+  .indicator-container {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

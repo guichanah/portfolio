@@ -17,10 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-
-
-
-    document.addEventListener("wheel", function(event) {
+    function action_wheel(event){
         if (event.deltaY > 0) {
             currentIndex = Math.min(currentIndex + 1, sections.length - 1);
         } else {
@@ -28,9 +25,28 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         scrollToSection(currentIndex);
         event.preventDefault();
-    }, { passive: false });
+    }
+
+    function swiper_none(){
+        var win_w = window.innerWidth;
+        if(win_w >= 790){
+            
+            document.addEventListener("wheel",  action_wheel, { passive: false });
+        }else{
+            document.removeEventListener("wheel",  action_wheel, { passive: false });
+        }
+    }
+
+
+    swiper_none();
     
+    window.addEventListener("resize",swiper_none);
+
     indicators.forEach((dot, index) => {
         dot.addEventListener("click", () => scrollToSection(index));
     });
 });
+
+
+
+
