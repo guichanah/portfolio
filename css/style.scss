@@ -165,7 +165,7 @@ section {
 
 //works
 #works{width: 100%;
-    h2{padding: 2vw 0;}
+    h2{padding: 1.5vw 0; font-size: clamp(18px ,2vw, 30px);}
 }
 #projectlist{width: 100%; height: 72.6%; 
     display: flex; flex-wrap: wrap;

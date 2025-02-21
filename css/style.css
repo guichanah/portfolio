@@ -267,7 +267,8 @@ section {
   width: 100%;
 }
 #works h2 {
-  padding: 2vw 0;
+  padding: 1.5vw 0;
+  font-size: clamp(18px, 2vw, 30px);
 }
 
 #projectlist {

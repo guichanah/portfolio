@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
      particlesJS("particles-js", {
         "particles": {
             "number": {
-                "value": 100,  /* 입자 개수 */
+                "value": 150,  /* 입자 개수 */
                 "density": {
                     "enable": true,
                     "value_area": 800
@@ -100,8 +100,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    
+
+
+
+
+
 // JavaScript로 랜덤한 별 위치 만들기
-for (let i = 0; i < 300; i++) {
+for (let i = 0; i < 400; i++) {
     let star = document.createElement("div");
     star.classList.add("star");
     document.getElementById("contact").appendChild(star);
