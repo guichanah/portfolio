@@ -44,6 +44,8 @@ nav ul li a:hover {
     color: #e26511;
 }
 
+.indicator-container{z-index: 500;}
+
 //메인
 .inner{padding: 0 15vw;}
 
@@ -69,27 +71,92 @@ section {
         p#name{font-size: clamp(26px, 4vw, 40px);}
     }
     p#year{font-size: clamp(16px, 3vw, 24px);}
+
+    //메인텍스트에 효과부여
+    @keyframes blurIn {
+        0% { filter: blur(10px); opacity: 0; transform: translateY(20px); }
+        100% { filter: blur(0); opacity: 1; transform: translateY(0); }
+    }
+    
+    h1 {
+        opacity: 0;
+        animation: blurIn 1.5s ease-out forwards;
+    }
+    
+    #name, #year {
+        opacity: 0;
+        animation: blurIn 1.5s ease-out forwards;
+    }
+    
+    #name { animation-delay: 1s; }
+    #year { animation-delay: 1.5s; }
+
+    @keyframes floatShapes {
+        0% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+        50% { transform: translateY(-20px) rotate(10deg); opacity: 0.9; }
+        100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+    }
+    ///배경 효과
+    #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    #intro, #year {
+        position: relative;
+        z-index: 10; /* 글자가 입자보다 위에 있도록 설정 */
+        color: white; /* 가독성을 위해 흰색 텍스트 */
+    }
 }
 
+
+
+
 #about {width: 100%; height: 100vh; word-break: keep-all;
-    .inner{width: 100%; padding: 1vw 15vw; display: flex; justify-content: space-between;}
+    .inner{width: 100%; padding: 1vw 15vw; display: flex; justify-content: space-between;
+        flex-wrap: wrap;
+    }
     h3{padding: 2vw 0; font-weight: bold; font-size: clamp(18px ,2vw, 30px);}
 }
 #aboutme{width: 21%; min-width: 179px; display: flex; flex-direction: column;}
 #profileimg{width: 100%;
-    img{width: 100%;}
+    img{width: 90%;}
 }
-#myinfo{width: 100%; display: flex; flex-direction: column; gap: 2.5vw; font-size: clamp(14px, 2vw, 20px); padding-top: 1vw;}
+#myinfo{width: 100%; display: flex; flex-direction: column; gap: 1vw; font-size: clamp(16px, 2vw, 20px); padding-top: 1vw;}
+.box{width:21%;}
 
-
-#eduexp{width: 50%; min-width: 435px;}
+#eduexp{width: 60%; min-width: 435px;}
 .profile{display: flex; flex-direction: column;}
 
-#edex{display: flex; flex-direction: column; font-size: clamp(14px, 2vw, 20px); gap: 2.5vw;}
+#edex{display: flex; flex-direction: column; font-size: clamp(16px, 2vw, 20px); gap: 1.6vw;}
 
 
-#skills{width: 20%; display: flex; flex-direction: column; gap: 3vw;}
-#programs{display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2vw;}
+#skills{width: 100%; }
+#programs{display: flex; justify-content: space-around; flex-wrap: wrap; gap: 5vw;}
+
+//아이콘 움직임
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px); /* 위로 살짝 이동 */
+    }
+}
+
+#programs p img {
+    animation: float 2s ease-in-out infinite;
+}
+
+#programs p:nth-child(2) img { animation-delay: 0.2s; }
+#programs p:nth-child(3) img { animation-delay: 0.4s; }
+#programs p:nth-child(4) img { animation-delay: 0.6s; }
+#programs p:nth-child(5) img { animation-delay: 0.8s; }
+#programs p:nth-child(6) img { animation-delay: 1s; }
 
 
 
@@ -114,7 +181,7 @@ section {
     opacity: 0; width: 100%; height: 100%; font-weight: bold; transition: all .5s;
     h3{font-size: clamp(22px, 2vw, 34px);}
     a{padding: 5px 8px; border: 1px solid #fff; background: #fff; color: #000;
-        border-radius: 25px;
+        border-radius: 5px;
     }
 }
 #hanulchae:hover{
@@ -134,7 +201,7 @@ section {
     opacity: 0; width: 100%; height: 100%; font-weight: bold; transition: all .5s;
     h3{font-size: clamp(22px, 2vw, 34px);}
     a{padding: 5px 8px; border: 1px solid #fff; background: #fff; color: #000;
-        border-radius: 25px;
+        border-radius: 5px;
     }
 }
 #safe:hover{
@@ -153,7 +220,7 @@ section {
     opacity: 0; width: 100%; height: 100%; font-weight: bold; transition: all .5s;
     h3{font-size: clamp(22px, 2vw, 34px);}
     a{padding: 5px 8px; border: 1px solid #fff; background: #fff; color: #000;
-        border-radius: 25px;
+        border-radius: 5px;
     }
 }
 #koat:hover{
@@ -173,7 +240,7 @@ section {
     opacity: 0; width: 100%; height: 100%; font-weight: bold; transition: all .5s;
     h3{font-size: clamp(22px, 2vw, 34px);}
     a{padding: 5px 8px; border: 1px solid #fff; background: #fff; color: #000;
-        border-radius: 25px;
+        border-radius: 5px;
     }
 }
 #gonggan:hover{
@@ -191,13 +258,60 @@ section {
 
 
 #contact {
-    h2{font-family: 'Trebuchet MS';
-        font-size: clamp(60px, 6vw, 80px);}
     width: 100%;
     color: white;
     display: flex; flex-direction: column; justify-content: center; gap: 5vw;
     text-align: center; align-items: center;
+    h2 {
+        font-family: 'Trebuchet MS';
+        font-size: clamp(60px, 6vw, 80px);
+    }
+    h2 {
+        
+        display: flex;
+        gap: 5px;
+    }
+    .letter {
+        display: inline-block;
+        animation: bounce 0.6s ease-in-out infinite;
+    }
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+    
 }
+
+#Emailcall{font-size: 20px;}
+
+#contact {
+    position: relative;
+    height: 100vh;
+    
+    overflow: hidden; /* 별들이 페이지 밖으로 나가지 않도록 */
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+
+
+
 
 
 
@@ -225,16 +339,16 @@ section {
     background: #e26511;
 }
 
-@media all and (max-width:1260px){
+@media all and (max-width:1067px){
     #about .inner{flex-wrap: wrap; gap: 2vw; padding: 4vw 15vw;}
     #aboutme{width: 35%;}
     #eduexp{width: 55%;}
     #myinfo{gap: 1vw;}
-    #edex{gap: 2.3vw;}
-    #skills{flex-direction: row; width: 100%; gap: 0vw;
+    #edex{gap: 1.3vw;}
+    #skills{flex-direction: column; width: 100%; gap: 0vw;
         img{transform: scale(.8);}
     }
-    #programs{width: 100%; flex-direction: row; gap: 3px;}
+    #programs{width: 100%; flex-direction: row; gap: 2px;}
     #extra{width: 30%;}
 }
 
@@ -246,16 +360,23 @@ section {
 @media all and (max-width:790px){
     html,body{overflow:auto;}
     section{height: auto;}
-    #main, #contact{height: 80vw}
+    #main, 
+    #contact{height: 60vh}
     #about{height: auto;}
-    #works{height: 100vh;}
+    #works{height: auto;}
     #eduexp{min-width: 350px;}
     #about .inner{display: flex; flex-direction: column; text-align: center; align-items: center;
-        padding: 0 5vw;
+        padding: 0 5vw; gap: 5vw;
     }
     .indicator-container{display: none;}
+    #projectlist{flex-direction: column; height: 120vh;
+        &>div{width: 100%; height: 25%;}
+    }
 }
 
-@media all and (max-width:460px){
-    
+@media all and (max-width:566px){
+    #skills{width: 70%;}
+    #programs{ gap: 2vw;
+        img{width: 60%;}
+    }
 }

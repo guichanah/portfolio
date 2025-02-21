@@ -64,6 +64,10 @@ nav ul li a:hover {
   color: #e26511;
 }
 
+.indicator-container {
+  z-index: 500;
+}
+
 .inner {
   padding: 0 15vw;
 }
@@ -100,6 +104,59 @@ section {
 #main p#year {
   font-size: clamp(16px, 3vw, 24px);
 }
+@keyframes blurIn {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#main h1 {
+  opacity: 0;
+  animation: blurIn 1.5s ease-out forwards;
+}
+#main #name, #main #year {
+  opacity: 0;
+  animation: blurIn 1.5s ease-out forwards;
+}
+#main #name {
+  animation-delay: 1s;
+}
+#main #year {
+  animation-delay: 1.5s;
+}
+@keyframes floatShapes {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+}
+#main #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#main #intro, #main #year {
+  position: relative;
+  z-index: 10; /* 글자가 입자보다 위에 있도록 설정 */
+  color: white; /* 가독성을 위해 흰색 텍스트 */
+}
 
 #about {
   width: 100%;
@@ -111,6 +168,7 @@ section {
   padding: 1vw 15vw;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 #about h3 {
   padding: 2vw 0;
@@ -129,20 +187,24 @@ section {
   width: 100%;
 }
 #profileimg img {
-  width: 100%;
+  width: 90%;
 }
 
 #myinfo {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2.5vw;
-  font-size: clamp(14px, 2vw, 20px);
+  gap: 1vw;
+  font-size: clamp(16px, 2vw, 20px);
   padding-top: 1vw;
 }
 
+.box {
+  width: 21%;
+}
+
 #eduexp {
-  width: 50%;
+  width: 60%;
   min-width: 435px;
 }
 
@@ -154,22 +216,51 @@ section {
 #edex {
   display: flex;
   flex-direction: column;
-  font-size: clamp(14px, 2vw, 20px);
-  gap: 2.5vw;
+  font-size: clamp(16px, 2vw, 20px);
+  gap: 1.6vw;
 }
 
 #skills {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  gap: 3vw;
+  width: 100%;
 }
 
 #programs {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 2vw;
+  gap: 5vw;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px); /* 위로 살짝 이동 */
+  }
+}
+#programs p img {
+  animation: float 2s ease-in-out infinite;
+}
+
+#programs p:nth-child(2) img {
+  animation-delay: 0.2s;
+}
+
+#programs p:nth-child(3) img {
+  animation-delay: 0.4s;
+}
+
+#programs p:nth-child(4) img {
+  animation-delay: 0.6s;
+}
+
+#programs p:nth-child(5) img {
+  animation-delay: 0.8s;
+}
+
+#programs p:nth-child(6) img {
+  animation-delay: 1s;
 }
 
 #works {
@@ -217,7 +308,7 @@ section {
   border: 1px solid #fff;
   background: #fff;
   color: #000;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 #hanulchae:hover #hanulchae1 {
@@ -256,7 +347,7 @@ section {
   border: 1px solid #fff;
   background: #fff;
   color: #000;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 #safe:hover #safe1 {
@@ -295,7 +386,7 @@ section {
   border: 1px solid #fff;
   background: #fff;
   color: #000;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 #koat:hover #koat1 {
@@ -334,7 +425,7 @@ section {
   border: 1px solid #fff;
   background: #fff;
   color: #000;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 #gonggan:hover #gonggan1 {
@@ -360,7 +451,50 @@ section {
   font-family: "Trebuchet MS";
   font-size: clamp(60px, 6vw, 80px);
 }
+#contact h2 {
+  display: flex;
+  gap: 5px;
+}
+#contact .letter {
+  display: inline-block;
+  animation: bounce 0.6s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 
+#Emailcall {
+  font-size: 20px;
+}
+
+#contact {
+  position: relative;
+  height: 100vh;
+  overflow: hidden; /* 별들이 페이지 밖으로 나가지 않도록 */
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* 페이지 인디케이터 스타일 */
 .indicator-container {
   position: fixed;
@@ -385,7 +519,7 @@ section {
   background: #e26511;
 }
 
-@media all and (max-width: 1260px) {
+@media all and (max-width: 1067px) {
   #about .inner {
     flex-wrap: wrap;
     gap: 2vw;
@@ -401,10 +535,10 @@ section {
     gap: 1vw;
   }
   #edex {
-    gap: 2.3vw;
+    gap: 1.3vw;
   }
   #skills {
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     gap: 0vw;
   }
@@ -414,7 +548,7 @@ section {
   #programs {
     width: 100%;
     flex-direction: row;
-    gap: 3px;
+    gap: 2px;
   }
   #extra {
     width: 30%;
@@ -437,14 +571,15 @@ section {
   section {
     height: auto;
   }
-  #main, #contact {
-    height: 80vw;
+  #main,
+  #contact {
+    height: 60vh;
   }
   #about {
     height: auto;
   }
   #works {
-    height: 100vh;
+    height: auto;
   }
   #eduexp {
     min-width: 350px;
@@ -455,8 +590,28 @@ section {
     text-align: center;
     align-items: center;
     padding: 0 5vw;
+    gap: 5vw;
   }
   .indicator-container {
     display: none;
+  }
+  #projectlist {
+    flex-direction: column;
+    height: 120vh;
+  }
+  #projectlist > div {
+    width: 100%;
+    height: 25%;
+  }
+}
+@media all and (max-width: 566px) {
+  #skills {
+    width: 70%;
+  }
+  #programs {
+    gap: 2vw;
+  }
+  #programs img {
+    width: 60%;
   }
 }/*# sourceMappingURL=style.css.map */
