@@ -100,7 +100,7 @@ section {
     #particles-js {
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 130vh;
         top: 0;
         left: 0;
         z-index: 1;
@@ -361,11 +361,11 @@ section {
     html,body{overflow:auto;}
     section{height: auto;}
     #main, 
-    #contact{height: 60vh}
+    #contact{height: 100vh}
     #about{height: auto;}
     #works{height: auto;}
     #eduexp{min-width: 350px;}
-    #about .inner{display: flex; flex-direction: column; text-align: center; align-items: center;
+    #about .inner{display: flex; flex-direction: column; align-items: center;
         padding: 0 5vw; gap: 5vw;
     }
     .indicator-container{display: none;}
